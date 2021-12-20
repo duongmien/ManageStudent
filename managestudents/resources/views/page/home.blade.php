@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+<!-- test -->
 <!-- <?php
     use Illuminate\Support\Facades\Session;
     $message = Session::get('message');
@@ -458,4 +459,4 @@
 		</section>
 	<!-- End teacher section
 		============================================= -->
- @endsection
+@endsection
