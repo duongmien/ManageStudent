@@ -107,58 +107,58 @@
 			<div class="container">
 				<div class="sponsor-item">
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-1.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-1.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-1.jpg')}}" alt="">
 					</div>
 					<div class="sponsor-pic text-center ">
-						<img src="assets/img/sponsor/s-2.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-2.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-2.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-3.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-3.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-3.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-4.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-4.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-4.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-5.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-5.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-5.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-6.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-6.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-6.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-1.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-1.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-1.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-2.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-2.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-2.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-3.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-3.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-3.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-4.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-4.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-4.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-5.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-5.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-5.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-6.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-6.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-6.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-1.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-1.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-1.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-2.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-2.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-2.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-3.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-3.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-3.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-4.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-4.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-4.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-5.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-5.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-5.jpg')}}"  alt="">
 					</div>
 					<div class="sponsor-pic text-center">
-						<img src="assets/img/sponsor/s-6.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/sponsor/s-6.jpg" alt="">
+						<img src="{{('assets/img/sponsor/s-6.jpg')}}"  alt="">
 					</div>
 				</div>
 			</div>
@@ -208,7 +208,7 @@
 							</div>
 						</div>
 						<div class="bg-mockup">
-							<img src="assets/img/about/abt.jpg" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/about/abt.jpg" alt="">
+							<img src="{{('assets/img/about/abt.jpg')}}" alt="">
 						</div>
 					</div>
 					<!-- /form -->
@@ -294,13 +294,13 @@
 				<div class="teacher-secound-slide">
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-1.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-1.png" alt="">
+							<img src="{{('assets/img/teacher/tb-1.png')}}" alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -312,13 +312,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-2.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-2.png" alt="">
+							<img src="{{('assets/img/teacher/tb-2.png')}}" alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -330,13 +330,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-3.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-3.png" alt="">
+							<img src="{{('assets/img/teacher/tb-3.png')}}" alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -348,13 +348,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-4.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-4.png" alt="">
+							<img src="{{('assets/img/teacher/tb-4.png')}}" alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -366,13 +366,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-1.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-1.png" alt="">
+							<img src="{{('assets/img/teacher/tb-1.png')}}" alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -384,13 +384,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-3.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-3.png" alt="">
+							<img src="{{('assets/img/teacher/tb-3.png')}}" alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -402,13 +402,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-1.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-1.png" alt="">
+							<img src="{{('assets/img/teacher/tb-1.png')}}"  alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -420,13 +420,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-4.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-4.png" alt="">
+							<img src="{{('assets/img/teacher/tb-4.png')}}"  alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -438,13 +438,13 @@
 
 					<div class="teacher-img-text relative-position text-center">
 						<div class="teacher-img-social relative-position">
-							<img src="assets/img/teacher/tb-1.png" tppabs="https://jthemes.net/themes/html/genius-course/assets/img/teacher/tb-1.png" alt="">
+							<img src="{{('assets/img/teacher/tb-1.png')}}"  alt="">
 							<div class="blakish-overlay"></div>
 							<div class="teacher-social-list ul-li">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-g')}}"></i></a></li>
 								</ul>
 							</div>
 						</div>

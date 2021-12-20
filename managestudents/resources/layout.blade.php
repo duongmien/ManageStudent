@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{assets('css/fontawesome-all.css')}}">
     <link rel="stylesheet" href="{{assets('css/flaticon.css')}}">
     <link rel="stylesheet" type="text/css" href="{{assets('css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{assets/css/bootstrap.min..css')}}">
+    <link rel="stylesheet" href="{{assets('css/bootstrap.min..css')}}">
     <link rel="stylesheet" href="{{assets('css/video.min..css')}}">
     <link rel="stylesheet" href="{{assets('css/animate.min..css')}}">
     <link rel="stylesheet" href="{{assets('css/lightbox..css')}}">
