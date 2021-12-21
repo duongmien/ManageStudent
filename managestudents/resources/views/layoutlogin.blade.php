@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trang chủ</title>
+    <title>Input</title>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{('assets/css/index.css')}}">
     <link rel="stylesheet" href="{{('assets/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{('assets/css/fontawesome-all.css')}}">
     <link rel="stylesheet" href="{{('assets/css/flaticon.css')}}">
@@ -70,47 +71,6 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="log-in float-right">
-                            <a data-toggle="modal" data-target="#myModal" href="#">Đăng nhập</a>
-                            <!-- The Modal -->
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header backgroud-style">
-                                            <div class="gradient-bg"></div>
-                                            <div class="popup-logo">
-                                                <img src="{{('assets/img/logo/p-logo.jpg')}}" alt="">
-                                            </div>
-                                            <div class="popup-text text-center">
-                                                <h2> <span>Đăng nhập</span> tài khoản của bạn.</h2>
-                                            </div>
-                                        </div>
-
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <div class="alt-text text-center"><a href="#">ĐĂNG NHẬP</a> </div>
-                                            <form class="contact_form" action="#" method="POST" enctype="multipart/form-data">
-                                                <div class="contact-info">
-                                                    <input class="name" name="madn" type="text" placeholder="Nhập mã đăng nhập của bạn...">
-                                                </div>
-                                                <div class="contact-info">
-                                                    <input class="pass" name="name" type="password" placeholder="Nhập mật khẩu...">
-                                                </div>
-                                                <div class="nws-button text-center white text-capitalize">
-                                                    <button type="submit" value="Submit">đăng nhập</button>
-                                                </div>
-                                            </form>
-                                            <div class="log-in-footer text-center">
-                                                <p>Quản lý thông tin sinh viên</p>
-                                                <p>Trường đại học Sư Phạm Kỹ Thuật Đà Nẵng</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <nav class="navbar-menu float-right">
