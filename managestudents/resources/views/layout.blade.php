@@ -9,22 +9,14 @@
     <link rel="stylesheet" href="{{('assets/css/fontawesome-all.css')}}">
     <link rel="stylesheet" href="{{('assets/css/flaticon.css')}}">
     <link rel="stylesheet" type="text/css" href="{{('assets/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/bootstrap.min..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/video.min..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/animate.min..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/lightbox..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/progess..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/style..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/responsive..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/colors/switch..css')}}">
-    <link href="{{('assets/css/colors/color-2.css')}}" rel="alternate stylesheet" type="text/css" title="color-2">
-    <link href="{{('assets/css/colors/color-3.css')}}" rel="alternate stylesheet" type="text/css" title="color-3">
-    <link href="{{('assets/css/colors/color-4.css')}}" rel="alternate stylesheet" type="text/css" title="color-4">
-    <link href="{{('assets/css/colors/color-5.css')}}" rel="alternate stylesheet" type="text/css" title="color-5">
-    <link href="{{('assets/css/colors/color-6.css')}}" rel="alternate stylesheet" type="text/css" title="color-6">
-    <link href="{{('assets/css/colors/color-7.css')}}" rel="alternate stylesheet" type="text/css" title="color-7">
-    <link href="{{('assets/css/colors/color-8.css')}}" rel="alternate stylesheet" type="text/css" title="color-8">
-    <link href="{{('assets/css/colors/color-9.css')}}" rel="alternate stylesheet" type="text/css" title="color-9">
+    <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/video.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/progess.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/colors/switch.css')}}">
     <!-- <link rel="icon" type="png" href="{{asset('frontend/assets/img/favicon.png')}}"> -->
 </head>
 
