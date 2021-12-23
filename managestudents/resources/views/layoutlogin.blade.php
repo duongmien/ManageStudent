@@ -5,38 +5,30 @@
     <title>Input</title>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{('assets/css/index.css')}}">
     <link rel="stylesheet" href="{{('assets/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{('assets/css/fontawesome-all.css')}}">
     <link rel="stylesheet" href="{{('assets/css/flaticon.css')}}">
     <link rel="stylesheet" type="text/css" href="{{('assets/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/bootstrap.min..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/video.min..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/animate.min..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/lightbox..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/progess..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/style..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/responsive..css')}}">
-    <link rel="stylesheet" href="{{('assets/css/colors/switch..css')}}">
-    <link href="{{('assets/css/colors/color-2.css')}}" rel="alternate stylesheet" type="text/css" title="color-2">
-    <link href="{{('assets/css/colors/color-3.css')}}" rel="alternate stylesheet" type="text/css" title="color-3">
-    <link href="{{('assets/css/colors/color-4.css')}}" rel="alternate stylesheet" type="text/css" title="color-4">
-    <link href="{{('assets/css/colors/color-5.css')}}" rel="alternate stylesheet" type="text/css" title="color-5">
-    <link href="{{('assets/css/colors/color-6.css')}}" rel="alternate stylesheet" type="text/css" title="color-6">
-    <link href="{{('assets/css/colors/color-7.css')}}" rel="alternate stylesheet" type="text/css" title="color-7">
-    <link href="{{('assets/css/colors/color-8.css')}}" rel="alternate stylesheet" type="text/css" title="color-8">
-    <link href="{{('assets/css/colors/color-9.css')}}" rel="alternate stylesheet" type="text/css" title="color-9">
+    <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/video.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/progess.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/index.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/colors/switch.css')}}">
+    <script src="https://kit.fontawesome.com/1166767409.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- <link rel="icon" type="png" href="{{asset('frontend/assets/img/favicon.png')}}"> -->
 </head>
 
 <body>
 
     <div id="preloader"></div>
-
-
     <!-- Start of Header section
 		============================================= -->
-    <header>
+        <header>
         <div id="main-menu" class="main-menu-container">
             <div class="main-menu">
                 <div class="container">
@@ -71,6 +63,47 @@
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="log-in float-right">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Đăng nhập</a>
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header backgroud-style">
+                                            <div class="gradient-bg"></div>
+                                            <div class="popup-logo">
+                                                <img src="{{('assets/img/logo/p-logo.jpg')}}" alt="">
+                                            </div>
+                                            <div class="popup-text text-center">
+                                                <h2> <span>Đăng nhập</span> tài khoản của bạn.</h2>
+                                            </div>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="alt-text text-center"><a href="#">ĐĂNG NHẬP</a> </div>
+                                            <form class="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                                                <div class="contact-info">
+                                                    <input class="name" name="madn" type="text" placeholder="Nhập mã đăng nhập của bạn...">
+                                                </div>
+                                                <div class="contact-info">
+                                                    <input class="pass" name="name" type="password" placeholder="Nhập mật khẩu...">
+                                                </div>
+                                                <div class="nws-button text-center white text-capitalize">
+                                                    <button type="submit" value="Submit">đăng nhập</button>
+                                                </div>
+                                            </form>
+                                            <div class="log-in-footer text-center">
+                                                <p>Quản lý thông tin sinh viên</p>
+                                                <p>Trường đại học Sư Phạm Kỹ Thuật Đà Nẵng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <nav class="navbar-menu float-right">
