@@ -65,7 +65,7 @@
                                 use Illuminate\Support\Facades\Session;
                                 $idsv = Session::get('idsv');
                                 if($idsv != null){?>
-                                    <a href="{{URL::to('logout')}}" >Log out</a>
+                                    <a href="{{URL::to('logout')}}" >Logout</a>
                                 <?php }else{?>
                                     <a data-toggle="modal" data-target="#myModal" href="#">Đăng nhập</a><?php
                                 }
@@ -116,7 +116,7 @@
                             <div class="nav-menu ul-li">
                                 <ul>
                                     <li class="menu-item-has-children ul-li-block">
-                                        <a href="#">Trang Chủ</a>
+                                        <a href="{{URL::to('/')}}">Trang Chủ</a>
                                     </li>
                                     <li><a href="contact.html">Liên hệ</a></li>
                                 </ul>
