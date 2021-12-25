@@ -1,14 +1,14 @@
 @extends('layout')
 @section('content')
 <!-- test -->
-<!-- <?php
+<?php
     use Illuminate\Support\Facades\Session;
     $message = Session::get('message');
     if($message){
         echo '<script>alert("'.$message.'");</script> ';
         Session::put('message',null);
     }
-    ?> -->
+    ?>
  	<!-- Start of slider section
  		============================================= -->
  		<section id="slide" class="slider-section">
@@ -24,9 +24,20 @@
  							</div>
  						</div>
  						<div class="layer-1-4">
- 							<div class="genius-btn  text-center text-uppercase ul-li-block bold-font">
- 								<a href="#">ĐĂNG NHẬP <i class="fas fa-caret-right"></i></a>
- 							</div>
+						 <?php
+                                
+                                $idsv = Session::get('idsv');
+                                if($idsv != null){?>
+                                    
+                                <?php }else{?>
+                                    <div class="genius-btn  text-center text-uppercase ul-li-block bold-font">
+ 								<a data-toggle="modal" data-target="#myModal" href="#">ĐĂNG NHẬP <i class="fas fa-caret-right"></i></a>
+ 							</div><?php
+                                }
+                            ?>
+
+						 
+ 							
  						</div>
  					</div>
 

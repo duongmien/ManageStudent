@@ -36,12 +36,7 @@
                             <a class="navbar-brand text-uppercase" href="#"><img src="{{('assets/img/logo/logo.png')}}" alt="logo"></a>
                         </div><!-- /.navbar-header -->
 
-                        <div class="select-lang">
-                            <select>
-                                <option value="9" selected="">VNI</option>
-                                <option value="10">ENG</option>
-                            </select>
-                        </div>
+                       
                         <div class="cart-search float-right ul-li">
                             <ul>
                                 <li>
@@ -64,7 +59,15 @@
                             </ul>
                         </div>
                         <div class="log-in float-right">
-                            <a data-toggle="modal" data-target="#myModal" href="#">Đăng nhập</a>
+                            <?php
+                                use Illuminate\Support\Facades\Session;
+                                $idsv = Session::get('idsv');
+                                if($idsv != null){?>
+                                    <a href="{{URL::to('logout')}}" >Log out</a>
+                                <?php }else{?>
+                                    <a data-toggle="modal" data-target="#myModal" href="#">Đăng nhập</a><?php
+                                }
+                            ?>
                             <!-- The Modal -->
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -84,15 +87,17 @@
                                         <!-- Modal body -->
                                         <div class="modal-body">
                                             <div class="alt-text text-center"><a href="#">ĐĂNG NHẬP</a> </div>
-                                            <form class="contact_form" action="#" method="POST" enctype="multipart/form-data">
-                                                <div class="contact-info">
-                                                    <input class="name" name="madn" type="text" placeholder="Nhập mã đăng nhập của bạn...">
+                                            <form class="contact_form" action="{{URL::to('/check-login')}}" method="POST" enctype="multipart/form-data">
+                                            @csrf   
+                                            <input type="hidden" name="token" value="{{ csrf_token() }}">
+                                            <div class="contact-info">
+                                                    <input class="name" name="idsv" type="text" placeholder="Nhập mã đăng nhập của bạn...">
                                                 </div>
                                                 <div class="contact-info">
-                                                    <input class="pass" name="name" type="password" placeholder="Nhập mật khẩu...">
+                                                    <input class="pass" name="password" type="password" placeholder="Nhập mật khẩu...">
                                                 </div>
                                                 <div class="nws-button text-center white text-capitalize">
-                                                    <button type="submit" value="Submit">đăng nhập</button>
+                                                    <button type="submit" value="Submit">Đăng nhập</button>
                                                 </div>
                                             </form>
                                             <div class="log-in-footer text-center">

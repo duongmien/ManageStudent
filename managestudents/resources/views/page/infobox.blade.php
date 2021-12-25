@@ -1,5 +1,13 @@
 @extends('layout')
 @section('content')
+<?php
+    use Illuminate\Support\Facades\Session;
+    $message = Session::get('message');
+    if($message){
+        echo '<script>alert("'.$message.'");</script> ';
+        Session::put('message',null);
+    }
+    ?>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="bootstrap" viewBox="0 0 118 94">
         <title>Bootstrap</title>
