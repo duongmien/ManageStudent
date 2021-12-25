@@ -116,7 +116,7 @@
 	<!-- Start of sponsor section
 		============================================= -->
 		<div id="sponsor" class="sponsor-section sponsor-2">
-			<div class="container">
+			<div class="container-home">
 				<div class="sponsor-item">
 					<div class="sponsor-pic text-center">
 						<img src="{{('assets/img/sponsor/s-1.jpg')}}" alt="">
@@ -182,7 +182,7 @@
 	<!-- Start of about us section
 		============================================= -->
 		<section id="about-us" class="about-us-section home-secound">
-			<div class="container">
+			<div class="container-home">
 				<div class="row">
 					<div class="col-md-5">
 						<div class="about-resigter-form backgroud-style relative-position">
@@ -256,7 +256,7 @@
 	<!-- Start secound testimonial section
 		============================================= -->
 		<section id="testimonial-secound" class="secound-testimoinial-section">
-			<div class="container">
+			<div class="container-home">
 				<div class="testimonial-slide">
 					<div class="section-title mb35 headline text-center">
 						<span class="subtitle text-uppercase">Trường Đại học Sư phạm Kỹ thuật</span>
@@ -298,7 +298,7 @@
 	<!-- Start secound teacher section
 		============================================= -->
 		<section id="teacher-2" class="secound-teacher-section">
-			<div class="container">
+			<div class="container-home">
 				<div class="section-title mb35 headline text-left">
 					<span class="subtitle text-uppercase">Trường Đại học Sư phạm Kỹ thuật</span>
 					<h2>Đội ngũ <span>Giảng Viên.</span></h2>

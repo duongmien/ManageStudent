@@ -31,15 +31,15 @@
         <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
       </symbol>
     </svg>
-    <main>
-      <form>
-        <div class="container bg-white">
-          <div class="row">
+    <main class="my-infobox">
+      <form class="px-4">
+        <div class="container-fluid bg-white">
+          <div class="row mx-3">
             <div class="col">
               <h2>Thông tin cá nhân</h2>
             </div>
           </div>
-          <div class="row content-container mt-3">
+          <div class="row content-container mt-3 mx-3">
             <div class="col">
               <div class="container-fuild pt-3 position-relative">
                 <span class="subtitle position-absolute">Thông tin chung</span>
@@ -75,21 +75,21 @@
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Sinh ngày:</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1</option>
                           <option value="1">2</option>
                           <option value="2">3</option>
                           <option value="3">4</option>
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1</option>
                           <option value="1">2</option>
                           <option value="2">3</option>
                           <option value="3">4</option>
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1999</option>
                           <option value="1">2000</option>
                           <option value="2">2001</option>
@@ -120,7 +120,7 @@
                     <div class="row mb-3">
                       <label class="col-sm-4 col-form-label">Giới tính:</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open this select menu</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -136,7 +136,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tôn giáo(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open this select menu</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -149,7 +149,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Dân tộc:</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open this select menu</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -162,7 +162,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quốc tịch:</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open this select menu</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -186,21 +186,21 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Ngày cấp(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1</option>
                           <option value="1">2</option>
                           <option value="2">3</option>
                           <option value="3">4</option>
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1</option>
                           <option value="1">2</option>
                           <option value="2">3</option>
                           <option value="3">4</option>
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1999</option>
                           <option value="1">2000</option>
                           <option value="2">2001</option>
@@ -259,7 +259,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Là địa chỉ của (*):</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -276,7 +276,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tỉnh/Thành Phố(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -289,7 +289,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quận/Huyện(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -302,7 +302,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Xã/Phường(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -326,21 +326,21 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Hiệu lực bảo hiểm(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1</option>
                           <option value="1">2</option>
                           <option value="2">3</option>
                           <option value="3">4</option>
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1</option>
                           <option value="1">2</option>
                           <option value="2">3</option>
                           <option value="3">4</option>
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>1999</option>
                           <option value="1">2000</option>
                           <option value="2">2001</option>
@@ -364,7 +364,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tài khoản ngân hàng:</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -396,7 +396,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khu vực tuyển sinh(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -437,7 +437,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-2 col-form-label">Năm sinh:</label>
                       <div class="col-sm-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -473,7 +473,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-2 col-form-label">Năm sinh(*):</label>
                       <div class="col-sm-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -532,7 +532,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-5 col-form-label">Là địa chỉ của (*):</label>
                       <div class="col-sm-7">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-control" aria-label="Default select example">
                           <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -555,15 +555,14 @@
                   <div class="col-5"></div>
                 </div>
                 <!-- end -->
-
-
-
-
-
               </div>
             </div>
           </div>
+  
         </div>
+        <div class="d-flex justify-content-center mt-3 mx-3">
+            <button type="button" class="btn btn-light font-weight-bold">Submit Form</button>
+          </div>
       </form>
     </main>
     <footer></footer>
