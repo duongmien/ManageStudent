@@ -276,11 +276,11 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tỉnh/Thành Phố(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open</option>
+                        <select class="form-control form-control-sm" aria-label="Default select example" id="provinve-city">
+                          <!-- <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option value="3">Three</option> -->
                         </select>
                       </div>
                     </div>
@@ -289,11 +289,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quận/Huyện(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                        <select class="form-control form-control-sm" aria-label="Default select example" id="district">
                         </select>
                       </div>
                     </div>
@@ -302,11 +298,8 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Xã/Phường(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                        <select class="form-control form-control-sm" aria-label="Default select example" id="ward">
+                          
                         </select>
                       </div>
                     </div>
@@ -452,6 +445,41 @@
           $(".file-upload").click();
           
         });
+
+        $.get("https://provinces.open-api.vn/api/?depth=2", function(data){
+          let listSelect = []
+          for (let index = 0; index < data.length; index++) {
+            let newSelect = `<option value="${data[index].code}">${data[index].name}</option>`
+            listSelect.push(newSelect)
+          }
+          $('#provinve-city').html(listSelect)
+        });
+        $('#provinve-city').on('change', function() {
+          console.log($(this).val());
+          let provinceCode = $(this).val();
+          $.get(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`, function(data){
+            let listSelect = []
+            let district = data.districts
+            for (let index = 0; index < district.length; index++) {
+              let newSelect = `<option value="${district[index].code}">${district[index].name}</option>`
+              listSelect.push(newSelect)
+            }
+            $('#district').html(listSelect)
+          });
+        })
+        $('#district').on('change', function() {
+          console.log($(this).val());
+          let districtCode = $(this).val();
+          $.get(`https://provinces.open-api.vn/api/d/${districtCode}?depth=2`, function(data){
+            let listSelect = []
+            let ward = data.wards
+            for (let index = 0; index < ward.length; index++) {
+              let newSelect = `<option value="${ward[index].code}">${ward[index].name}</option>`
+              listSelect.push(newSelect)
+            }
+            $('#ward').html(listSelect)
+          });
+        })
       });
     </script>
 @endsection
