@@ -290,6 +290,7 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quận/Huyện(*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example" id="district">
+                        <option value="0">--Chọn quận, huyện</option>
                         </select>
                       </div>
                     </div>
@@ -299,7 +300,7 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Xã/Phường(*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example" id="ward">
-                          
+                        <option value="0">--Chọn phường, xã</option>
                         </select>
                       </div>
                     </div>
@@ -448,6 +449,7 @@
 
         $.get("https://provinces.open-api.vn/api/?depth=2", function(data){
           let listSelect = []
+          listSelect.push(`<option value="0" selected>--Chọn tỉnh, thành phố</option>`)
           for (let index = 0; index < data.length; index++) {
             let newSelect = `<option value="${data[index].code}">${data[index].name}</option>`
             listSelect.push(newSelect)
@@ -460,6 +462,7 @@
           $.get(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`, function(data){
             let listSelect = []
             let district = data.districts
+            listSelect.push(`<option value="0">--Chọn quận, huyện</option>`)
             for (let index = 0; index < district.length; index++) {
               let newSelect = `<option value="${district[index].code}">${district[index].name}</option>`
               listSelect.push(newSelect)
