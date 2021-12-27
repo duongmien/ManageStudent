@@ -12,6 +12,9 @@ class InputInfoController extends Controller
 {
     public function index()
     {
-        return view('page.infobox');
+        $allnganh = DB::table('tbl_nganh')->get();
+        $allkhoa = DB::table('tbl_khoa')->get();
+        $alllopsh = DB::table('tbl_lopsh')->get();
+        return view('page.infobox',compact('allnganh','allkhoa','alllopsh'));
     }
 }

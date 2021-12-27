@@ -53,6 +53,7 @@
                       <input class="file-upload" type="file" accept="img/*"/>
                     </div>
                   </div>
+                  <!-- sinhvien -->
                   <div class="col-5">
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Họ và tên:</label>
@@ -61,7 +62,7 @@
                       </div>
                     </div>
                     <div class="row mb-3">
-                      <label for="inputEmail2" class="col-sm-4 col-form-label">Chuyên ngành đào tạo:</label>
+                      <label for="inputEmail2" class="col-sm-4 col-form-label">Chương trình đào tạo:</label>
                       <div class="col-sm-8">
                         <input type="email" readonly="readonly" class="form-control form-control-sm" id="inputEmail2">
                       </div>
@@ -129,6 +130,99 @@
                     </div>
                   </div>
                 </div>
+                <!-- admin -->
+                <!-- <div class="col-5">
+                    <div class="row mb-3">
+                      <label for="inputEmail1" class="col-sm-4 col-form-label">Họ và tên:</label>
+                      <div class="col-sm-8">
+                        <input type="email"  class="form-control form-control-sm" id="inputEmail1">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputEmail2" class="col-sm-4 col-form-label">Chương trình đào tạo:</label>
+                      <div class="col-sm-8">
+                        <input type="email"  class="form-control form-control-sm" id="inputEmail2">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-4 col-form-label">Ngành:</label>
+                      <div class="col-sm-8">
+                        <select class="form-control form-control-sm nganh" aria-label="Default select example">
+                          <option selected>Ngành</option>
+                          @foreach($allnganh as $n)
+                            <option value="{{$n->idnganh}}">{{$n->tennganh}}</option>
+                          @endforeach
+                        </select> 
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-4 col-form-label">Sinh ngày:</label>
+                      <div class="col-sm-8 d-flex align-items-center">
+                        <select class="form-control form-control-sm" aria-label="Default select example">
+                          <option selected>1</option>
+                          <option value="1">2</option>
+                          <option value="2">3</option>
+                          <option value="3">4</option>
+                        </select>
+                        <span class="mx-1">Tháng:</span>
+                        <select class="form-control form-control-sm" aria-label="Default select example">
+                          <option selected>1</option>
+                          <option value="1">2</option>
+                          <option value="2">3</option>
+                          <option value="3">4</option>
+                        </select>
+                        <span class="mx-1">Năm:</span>
+                        <select class="form-control form-control-sm"  aria-label="Default select example">
+                          <option selected>1999</option>
+                          <option value="1">2000</option>
+                          <option value="2">2001</option>
+                          <option value="3">2002</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="row mb-3">
+                      <label for="inputEmail1" class="col-sm-4 col-form-label">Lớp:</label>
+                      <div class="col-sm-8">
+                        <select class="form-control form-control-sm lop" aria-label="Default select example">
+                          <option selected>Lớp</option>
+                          @foreach($alllopsh as $n)
+                            <option value="{{$n->idlop}}">{{$n->tenlop}}</option>
+                          @endforeach
+                        </select>  
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputEmail1" class="col-sm-4 col-form-label khoa">Khoa:</label>
+                      <div class="col-sm-8">
+                        <select class="form-control form-control-sm" aria-label="Default select example">
+                          <option selected>Khoa</option>
+                          @foreach($allkhoa as $n)
+                            <option value="{{$n->idkhoa}}">{{$n->tenkhoa}}</option>
+                          @endforeach
+                        </select>  
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputEmail1" class="col-sm-4 col-form-label">Chuyên ngành:</label>
+                      <div class="col-sm-8">
+                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-4 col-form-label">Giới tính:</label>
+                      <div class="col-sm-8">
+                        <select class="form-control form-control-sm"  aria-label="Default select example">
+                          <option value="1">Nam</option>
+                          <option value="2">Nữ</option>
+                          <option value="3">Khác</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div> --> 
+                <!-- --end -->
                 <!-- below avatar session -->
                 <div class="row mb-3 mt-5">
                   <div class="col">
@@ -136,10 +230,14 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tôn giáo(*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option selected>--Tôn giáo</option>
+                          <option value="Không">Không</option>
+                          <option value="Công giáo">Công giáo</option>
+                          <option value="Phật giáo">Phật giáo</option>
+                          <option value="Hòa Hảo">Hòa Hảo</option>
+                          <option value="Tin Lành">Tin Lành</option>
+                          <option value="Cao Đài">Cao Đài</option>
+                          <option value="Hồi giáo">Hồi giáo</option>
                         </select>
                       </div>
                     </div>
@@ -149,10 +247,16 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Dân tộc:</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option selected>--Dân tộc</option>
+                          <option value="Kinh">Kinh</option>
+                          <option value="Tày">Tày</option>
+                          <option value="Thái">Thái</option>
+                          <option value="Mường">Mường</option>
+                          <option value="Khmer">Khmer</option>
+                          <option value="Hoa">Hoa</option>
+                          <option value="Nùng">Nùng</option>
+                          <option value="H'Mông">H'Mông</option>
+                          <option value="Dao">Dao</option>
                         </select>
                       </div>
                     </div>
@@ -161,11 +265,8 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quốc tịch:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                        <select class="form-control form-control-sm"readonly="readonly" aria-label="Default select example">
+                          <option selected>Việt Nam</option>
                         </select>
                       </div>
                     </div>
@@ -186,24 +287,21 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Ngày cấp(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
+                        @for ($i = 1; $i < 32; $i++)
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                        @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
+                        @for ($i = 1; $i < 13; $i++)
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                        @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
                         <select class="form-control form-control-sm px-0" aria-label="Default select example">
-                          <option selected>1999</option>
-                          <option value="1">2000</option>
-                          <option value="2">2001</option>
-                          <option value="3">2002</option>
+                        @for ($i = 2021; $i >= 1980; $i--)
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                        @endfor
                         </select>
                       </div>
                     </div>
@@ -259,10 +357,10 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Là địa chỉ của (*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option selected>Chọn</option>
+                          <option value="Nhà trọ, KTX">Nhà trọ, KTX</option>
+                          <option value="Họ hàng, Người quen">Họ hàng, Người quen</option>
+                          <option value="Gia đình">Gia đình</option>
                         </select>
                       </div>
                     </div>
@@ -319,25 +417,22 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Hiệu lực bảo hiểm(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
+                      <select class="form-control form-control-sm" aria-label="Default select example">
+                        @for ($i = 1; $i < 32; $i++)
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                        @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
+                        @for ($i = 1; $i < 13; $i++)
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                        @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
                         <select class="form-control form-control-sm px-0" aria-label="Default select example">
-                          <option selected>1999</option>
-                          <option value="1">2000</option>
-                          <option value="2">2001</option>
-                          <option value="3">2002</option>
+                        @for ($i = 2021; $i >= 1980; $i--)
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                        @endfor
                         </select>
                       </div>
                     </div>
@@ -358,10 +453,8 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tài khoản ngân hàng:</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option selected>Chọn</option>
+                          <option value="1">VietTinBank</option>
                         </select>
                       </div>
                     </div>
@@ -390,10 +483,11 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khu vực tuyển sinh(*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Open</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option selected>--Chọn khu vực</option>
+                          <option value="KV1">KV1</option>
+                          <option value="KV2">KV2</option>
+                          <option value="KV2NT">KV2NT</option>
+                          <option value="KV3">KV3</option>
                         </select>
                       </div>
                     </div>
@@ -483,5 +577,8 @@
           });
         })
       });
+    </script>
+    <script>
+
     </script>
 @endsection
