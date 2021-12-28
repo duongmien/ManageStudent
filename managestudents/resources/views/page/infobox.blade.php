@@ -407,7 +407,7 @@ use Illuminate\Support\Facades\Session;
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
                           <option >Chọn</option>
-                          <@foreach($dcc as $dcc)
+                          @foreach($dcc as $dcc)
                             @if($in->ladiachicua==$dcc->tendcc)
                             <option selected value="{{$dcc->tendcc}}">{{$dcc->tendcc}}</option>
                             @else
@@ -585,6 +585,7 @@ use Illuminate\Support\Facades\Session;
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script>
       $(document).ready(function() {
 	
@@ -613,27 +614,39 @@ use Illuminate\Support\Facades\Session;
         $.get("https://provinces.open-api.vn/api/?depth=2", function(data){
           let listSelect = []
           listSelect.push(`<option value="0" selected>--Chọn tỉnh, thành phố</option>`)
+          var nametinh = "<?php foreach($info as $key => $in) echo $in->tinh ?>"
           for (let index = 0; index < data.length; index++) {
-            let newSelect = `<option value="${data[index].code}">${data[index].name}</option>`
-            listSelect.push(newSelect)
+            if(data[index].name==nametinh){
+              let newSelect = `<option selected value="${data[index].code}">${data[index].name}</option>`
+              listSelect.push(newSelect)
+            }else{
+              let newSelect = `<option value="${data[index].code}">${data[index].name}</option>`
+              listSelect.push(newSelect)
+            }
           }
           $('#provinve-city').html(listSelect)
         });
-        $('#provinve-city').on('change', function() {
+        $('#provinve-city').on('mouseover', function() {
           console.log($(this).val());
           let provinceCode = $(this).val();
           $.get(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`, function(data){
             let listSelect = []
             let district = data.districts
             listSelect.push(`<option value="0">--Chọn quận, huyện</option>`)
+            var namehuyen = "<?php foreach($info as $key => $in) echo $in->huyen ?>"
             for (let index = 0; index < district.length; index++) {
+              if(district[index].name==namehuyen){
+                let newSelect = `<option selected value="${district[index].code}">${district[index].name}</option>`
+                listSelect.push(newSelect)
+            }else{
               let newSelect = `<option value="${district[index].code}">${district[index].name}</option>`
-              listSelect.push(newSelect)
+                listSelect.push(newSelect)
+            }
             }
             $('#district').html(listSelect)
           });
         })
-        $('#district').on('change', function() {
+        $('#district').on('mouseover', function() {
           console.log($(this).val());
           let districtCode = $(this).val();
           $.get(`https://provinces.open-api.vn/api/d/${districtCode}?depth=2`, function(data){
@@ -649,6 +662,5 @@ use Illuminate\Support\Facades\Session;
       });
     </script>
     <script>
-
     </script>
 @endsection
