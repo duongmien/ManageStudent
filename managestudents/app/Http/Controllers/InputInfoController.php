@@ -17,6 +17,10 @@ class InputInfoController extends Controller
         $allkhoa = DB::table('tbl_khoa')->get();
         $alllopsh = DB::table('tbl_lopsh')->get();
         $info = DB::table('tbl_user')->where('id',$id)->get();
-        return view('page.infobox',compact('allnganh','allkhoa','alllopsh','info'));
+        $tg = DB::table('tbl_tongiao')->get();
+        $dt = DB::table('tbl_dantoc')->get();
+        $dcc = DB::table('tbl_diachicua')->get();
+        $kv = DB::table('tbl_khuvuctuyensinh')->get();
+        return view('page.infobox',compact('allnganh','allkhoa','alllopsh','info','tg','dt','kv','dcc'));
     }
 }

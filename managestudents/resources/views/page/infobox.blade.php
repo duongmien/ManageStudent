@@ -1,7 +1,9 @@
 @extends('layout')
 @section('content')
 <?php
-    use Illuminate\Support\Facades\Session;
+
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\Session;
     $message = Session::get('message');
     if($message){
         echo '<script>alert("'.$message.'");</script> ';
@@ -43,6 +45,20 @@
             <div class="col">
               <div class="container-fuild pt-3 position-relative">
               @foreach($info as $key => $in)
+              <?php 
+                          $time = strtotime($in->hieuluc);
+                          $d = date('d',$time);
+                          $m = date('m',$time);
+                          $y = date('y',$time)+2000;
+                          $time1 = strtotime($in->ngaycap);
+                          $d1 = date('d',$time1);
+                          $m1 = date('m',$time1);
+                          $y1 = date('y',$time1)+2000;
+                          $time2 = strtotime($in->ngaysinh);
+                          $d2 = date('d',$time2);
+                          $m2 = date('m',$time2);
+                          $y2 = date('y',$time2)+2000;
+                          ?>
                 <span class="subtitle position-absolute">Thông tin chung</span>
                 <div class="row">
                   <div class="col-3 d-flex align-items-center justify-content-center">
@@ -77,25 +93,34 @@
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Sinh ngày:</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-control form-control-sm"disabled="true" aria-label="Default select example">
-                          <option selected>1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
+                      <select class="form-control form-control-sm"disabled="true" aria-label="Default select example">
+                      @for ($i = 1; $i < 32; $i++)
+                          @if($d2==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
+                        @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
                         <select class="form-control form-control-sm"disabled="true" aria-label="Default select example">
-                          <option selected>1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
+                        @for ($i = 1; $i < 13; $i++)
+                          @if($m2==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
+                        @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-control form-control-sm" disabled="true" aria-label="Default select example">
-                          <option selected>1999</option>
-                          <option value="1">2000</option>
-                          <option value="2">2001</option>
-                          <option value="3">2002</option>
+                        <select class="form-control form-control-sm px-0"disabled="true" aria-label="Default select example">
+                        @for ($i = 2021; $i >= 1980; $i--)
+                         @if($y2==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
+                          <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
+                        @endfor
                         </select>
                       </div>
                     </div>
@@ -243,14 +268,14 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tôn giáo(*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>--Tôn giáo</option>
-                          <option value="Không">Không</option>
-                          <option value="Công giáo">Công giáo</option>
-                          <option value="Phật giáo">Phật giáo</option>
-                          <option value="Hòa Hảo">Hòa Hảo</option>
-                          <option value="Tin Lành">Tin Lành</option>
-                          <option value="Cao Đài">Cao Đài</option>
-                          <option value="Hồi giáo">Hồi giáo</option>
+                          <option>--Tôn giáo</option>
+                          @foreach($tg as $t)
+                            @if($in->tongiao==$t->tentg)
+                            <option selected value="{{$t->tentg}}">{{$t->tentg}}</option>
+                            @else
+                            <option value="{{$t->tentg}}">{{$t->tentg}}</option>
+                            @endif
+                          @endforeach
                         </select>
                       </div>
                     </div>
@@ -260,16 +285,14 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Dân tộc:</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>--Dân tộc</option>
-                          <option value="Kinh">Kinh</option>
-                          <option value="Tày">Tày</option>
-                          <option value="Thái">Thái</option>
-                          <option value="Mường">Mường</option>
-                          <option value="Khmer">Khmer</option>
-                          <option value="Hoa">Hoa</option>
-                          <option value="Nùng">Nùng</option>
-                          <option value="H'Mông">H'Mông</option>
-                          <option value="Dao">Dao</option>
+                          <option>--Dân tộc</option>
+                          @foreach($dt as $t)
+                            @if($in->dantoc==$t->tendt)
+                            <option selected value="{{$t->tendt}}">{{$t->tendt}}</option>
+                            @else
+                            <option value="{{$t->tendt}}">{{$t->tendt}}</option>
+                            @endif
+                          @endforeach
                         </select>
                       </div>
                     </div>
@@ -299,21 +322,34 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Ngày cấp(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                      <select class="form-control form-control-sm" aria-label="Default select example">
+                        
                         @for ($i = 1; $i < 32; $i++)
+                          @if($d1==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
                         <select class="form-control form-control-sm" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
+                          @if($m1==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
                         <select class="form-control form-control-sm px-0" aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
+                         @if($y1==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
                         @endfor
                         </select>
                       </div>
@@ -370,10 +406,14 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Là địa chỉ của (*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>Chọn</option>
-                          <option value="Nhà trọ, KTX">Nhà trọ, KTX</option>
-                          <option value="Họ hàng, Người quen">Họ hàng, Người quen</option>
-                          <option value="Gia đình">Gia đình</option>
+                          <option >Chọn</option>
+                          <@foreach($dcc as $dcc)
+                            @if($in->ladiachicua==$dcc->tendcc)
+                            <option selected value="{{$dcc->tendcc}}">{{$dcc->tendcc}}</option>
+                            @else
+                            <option  value="{{$dcc->tendcc}}">{{$dcc->tendcc}}</option>
+                            @endif
+                          @endforeach
                         </select>
                       </div>
                     </div>
@@ -431,20 +471,33 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Hiệu lực bảo hiểm(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
                       <select class="form-control form-control-sm" aria-label="Default select example">
+                        
                         @for ($i = 1; $i < 32; $i++)
+                          @if($d==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
                         <select class="form-control form-control-sm" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
+                          @if($m==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
                         <select class="form-control form-control-sm px-0" aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
+                         @if($y==$i)
+                          <option selected value="<?php echo $i?>"><?php echo $i?></option>
+                          @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
+                          @endif
                         @endfor
                         </select>
                       </div>
@@ -496,11 +549,14 @@
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khu vực tuyển sinh(*):</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" aria-label="Default select example">
-                          <option selected>--Chọn khu vực</option>
-                          <option value="KV1">KV1</option>
-                          <option value="KV2">KV2</option>
-                          <option value="KV2NT">KV2NT</option>
-                          <option value="KV3">KV3</option>
+                          <option>--Chọn khu vực</option>
+                          @foreach($kv as $k)
+                            @if($in->khuvuc==$k->tenkv)
+                            <option selected value="{{$k->tenkv}}">{{$k->tenkv}}</option>
+                            @else
+                            <option value="{{$k->tenkv}}">{{$k->tenkv}}</option>
+                            @endif
+                          @endforeach
                         </select>
                       </div>
                     </div>
