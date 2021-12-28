@@ -626,7 +626,7 @@ use Illuminate\Support\Facades\Session;
           }
           $('#provinve-city').html(listSelect)
         });
-        $('#provinve-city').on('mouseover', function() {
+        $('#provinve-city').on('change', function() {
           console.log($(this).val());
           let provinceCode = $(this).val();
           $.get(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`, function(data){
@@ -646,7 +646,7 @@ use Illuminate\Support\Facades\Session;
             $('#district').html(listSelect)
           });
         })
-        $('#district').on('mouseover', function() {
+        $('#district').on('change', function() {
           console.log($(this).val());
           let districtCode = $(this).val();
           $.get(`https://provinces.open-api.vn/api/d/${districtCode}?depth=2`, function(data){
