@@ -12,9 +12,11 @@ class InputInfoController extends Controller
 {
     public function index()
     {
+        $id = Session::get('id');
         $allnganh = DB::table('tbl_nganh')->get();
         $allkhoa = DB::table('tbl_khoa')->get();
         $alllopsh = DB::table('tbl_lopsh')->get();
-        return view('page.infobox',compact('allnganh','allkhoa','alllopsh'));
+        $info = DB::table('tbl_user')->where('id',$id)->get();
+        return view('page.infobox',compact('allnganh','allkhoa','alllopsh','info'));
     }
 }

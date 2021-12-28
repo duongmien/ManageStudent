@@ -42,6 +42,7 @@
           <div class="row content-container mt-3 mx-3">
             <div class="col">
               <div class="container-fuild pt-3 position-relative">
+              @foreach($info as $key => $in)
                 <span class="subtitle position-absolute">Thông tin chung</span>
                 <div class="row">
                   <div class="col-3 d-flex align-items-center justify-content-center">
@@ -58,19 +59,19 @@
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Họ và tên:</label>
                       <div class="col-sm-8">
-                        <input type="email"  readonly="readonly"class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email"  value="{{$in->name}}" readonly="readonly"class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail2" class="col-sm-4 col-form-label">Chương trình đào tạo:</label>
                       <div class="col-sm-8">
-                        <input type="email" readonly="readonly" class="form-control form-control-sm" id="inputEmail2">
+                        <input type="email" readonly="readonly" value="{{$in->nganh}}" class="form-control form-control-sm" id="inputEmail2">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Ngành:</label>
                       <div class="col-sm-8">
-                        <input type="email" readonly="readonly" class="form-control form-control-sm" id="inputEmail3">
+                        <input type="email" readonly="readonly"value="{{$in->nganh}}" class="form-control form-control-sm" id="inputEmail3">
                       </div>
                     </div>
                     <div class="row mb-3">
@@ -103,13 +104,13 @@
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Lớp:</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" readonly="readonly"  id="inputEmail1">
+                        <input type="email" class="form-control form-control-sm"value="{{$in->lop}}" readonly="readonly"  id="inputEmail1">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khoa:</label>
                       <div class="col-sm-8">
-                        <input type="email" readonly="readonly" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" readonly="readonly"value="{{$in->khoa}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                     <div class="row mb-3">
@@ -122,9 +123,21 @@
                       <label class="col-sm-4 col-form-label">Giới tính:</label>
                       <div class="col-sm-8">
                         <select class="form-control form-control-sm" disabled="true" aria-label="Default select example">
+                          @if($in->gioitinh=="Nam")
+                          <option value="1" selected>Nam</option>
+                          @else
                           <option value="1">Nam</option>
+                          @endif
+                          @if($in->gioitinh=="Nữ")
+                          <option value="2" selected>Nữ</option>
+                          @else
                           <option value="2">Nữ</option>
-                          <option value="3">Khác</option>
+                          @endif
+                          @if($in->gioitinh=="Khác")
+                          <option value="3" selected>Khác</option>
+                          @else
+                          <<option value="3">Khác</option>
+                          @endif
                         </select>
                       </div>
                     </div>
@@ -265,7 +278,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quốc tịch:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm"readonly="readonly" aria-label="Default select example">
+                        <select class="form-control form-control-sm"readonly="readonly"disabled="true" aria-label="Default select example">
                           <option selected>Việt Nam</option>
                         </select>
                       </div>
@@ -278,7 +291,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Số CMND/CCCD(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->cmnd}}"  class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -310,7 +323,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Nơi cấp(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->noicap}}"  class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -321,7 +334,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Nơi sinh (Tỉnh/Tp) (*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->noisinh}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -329,7 +342,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Email(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->email}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -337,7 +350,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Điện thoại(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->dienthoai}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -348,7 +361,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Hộ khẩu thường trú(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->hokhau}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -409,7 +422,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Số bảo hiểm(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->sobaohiem}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -463,7 +476,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Số tài khoản:</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input type="email" value="{{$in->stk}}" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -471,7 +484,7 @@
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tài khoản Office365:</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <span>1911505310234@sv.ute.udn.vn</span>
+                        <span>{{$in->idsv}}@sv.ute.udn.vn</span>
                       </div>
                     </div>
                   </div>
@@ -502,6 +515,7 @@
                   </div>
                   <div class="col"></div>
                 </div>
+                @endforeach
               </div>
             </div>
           </div>

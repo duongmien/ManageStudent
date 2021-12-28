@@ -18,6 +18,7 @@ class LoginController extends Controller
         $result = DB::table('tbl_user')->where('idsv',$idsv)->where('password',$password)->first();
         if($result){
             Session::put('name',$result->name);
+            Session::put('id',$result->id);
             Session::put('idsv',$result->idsv);
             Session::put('message','Đăng nhập thành công!!!');
             return Redirect::to('/inputinfo');
