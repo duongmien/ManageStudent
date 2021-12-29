@@ -20,3 +20,5 @@ Route::post('/update-info/{id}','InputInfoController@update_info');
 Route::post('/check-login','LoginController@check_login');
 Route::get('/logout','LoginController@logout');
 
+Route::get('/dashboard','AdminController@index');
+
