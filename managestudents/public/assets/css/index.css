@@ -4,130 +4,149 @@
 body {
   background: #f2f2f2;
 } */
+
 .my-infobox form {
-  font-size: 12px!important;
-  padding-top: 150px;
-  padding-bottom: 1rem;
-  background-color: #0b5586;
+    font-size: 12px!important;
+    padding-top: 150px;
+    padding-bottom: 1rem;
+    background-color: #0b5586;
 }
+
 .my-infobox .col-form-label {
-  white-space: nowrap;
+    white-space: nowrap;
 }
+
 .my-infobox .avatar {
-  border-radius: 50%;
-  width: 150px;
-  display: block;
+    border-radius: 50%;
+    width: 150px;
+    display: block;
 }
+
 .my-infobox .content-container {
-  border: 1px solid #d1d1d1;
+    border: 1px solid #d1d1d1;
 }
+
 .my-infobox .bg-white {
-  background: #ffffff;
-  padding: 20px 40px 40px 40px;
+    background: #ffffff;
+    padding: 20px 40px 40px 40px;
 }
+
 .my-infobox .subtitle {
-  display: inline;
-  top: -15px;
-  background-color: white;
-  font-size: 15px;
+    display: inline;
+    top: -15px;
+    background-color: white;
+    font-size: 15px;
     font-weight: bold;
     padding: 3px 10px;
     text-transform: uppercase;
 }
 
 .my-infobox .b-example-divider {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
 .my-infobox .form-control-dark {
-  color: #fff;
-  background-color: var(--bs-dark);
-  border-color: var(--bs-gray);
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray);
 }
+
 .my-infobox .form-control-dark:focus {
-  color: #fff;
-  background-color: var(--bs-dark);
-  border-color: #fff;
-  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
 }
 
 .my-infobox .bi {
-  vertical-align: -.125em;
-  fill: currentColor;
+    vertical-align: -.125em;
+    fill: currentColor;
 }
 
 .my-infobox .text-small {
-  font-size: 85%;
+    font-size: 85%;
 }
 
 .my-infobox .dropdown-toggle {
-  outline: 0;
+    outline: 0;
 }
 
 .my-infobox .avatar-wrapper {
-	position: relative;
-	height: 140px;
-	width: 140px;
-	margin: 20px auto;
-	border-radius: 50%;
-	overflow: hidden;
-	box-shadow: 1px 1px 15px -5px black;
-	transition: all 0.3s ease;
+    position: relative;
+    height: 140px;
+    width: 140px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px -5px black;
+    transition: all 0.3s ease;
 }
 
 .my-infobox .avatar-wrapper:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-.my-infobox .avatar-wrapper:hover .profile-pic {
-	opacity: 0.2;
-}
-.my-infobox .avatar-wrapper .profile-pic {
-	height: 100%;
-  width: 100%;
-  transition: all 0.3s ease;
-}
-.my-infobox .avatar-wrapper .profile-pic {
-	height: 100%;
-  width: 100%;
-  transition: all 0.3s ease;
-}
-.my-infobox .avatar-wrapper .profile-pic:after {
-	font-family: 'Font Awesome 5 Free';
-  content: "\f007";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  font-size: 90px;
-  background: #ecf0f1;
-  color: #34495e;
-  text-align: center;
-}
-.my-infobox .avatar-wrapper .upload-button {
-	position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-.my-infobox .avatar-wrapper .upload-button .fa-arrow-circle-up{
-	position: absolute;
-  font-size: 75px;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  opacity: 0;
-  transition: all 0.3s ease;
-  color: #34495e;
-  transform: translate(-50%,-50%);
+.my-infobox .avatar-wrapper:hover .profile-pic {
+    opacity: 0.2;
 }
-.my-infobox .avatar-wrapper .upload-button:hover .fa-arrow-circle-up{
-	opacity: 0.9;
+
+.my-infobox .avatar-wrapper .profile-pic {
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.my-infobox .avatar-wrapper .profile-pic {
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.my-infobox .avatar-wrapper .profile-pic:after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f007";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 90px;
+    background: #ecf0f1;
+    color: #34495e;
+    text-align: center;
+}
+
+.my-infobox .avatar-wrapper .upload-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.my-infobox .avatar-wrapper .upload-button .fa-arrow-circle-up {
+    position: absolute;
+    font-size: 75px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #34495e;
+    transform: translate(-50%, -50%);
+}
+
+.my-infobox .avatar-wrapper .upload-button:hover .fa-arrow-circle-up {
+    opacity: 0.9;
+}
+
+.avatar-wrapper .profile-pic {
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
 }
