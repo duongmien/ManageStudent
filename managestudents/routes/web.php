@@ -22,4 +22,6 @@ Route::get('/logout','LoginController@logout');
 
 Route::get('/dashboard','AdminController@index');
 Route::get('/all-user','AdminController@all_user');
+Route::get('/add-user','AdminController@add_user');
+Route::post('/edit-user','AdminController@edit_user');
 
