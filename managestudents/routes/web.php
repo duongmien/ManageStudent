@@ -37,5 +37,6 @@ Route::get('/delete-nganh/{id}','NganhController@delete_nganh');
 
 // Lop
 Route::get('/all-lop','LopController@all_lop');
+Route::get('/delete-lop/{id}','LopController@delete_lop');
 
 

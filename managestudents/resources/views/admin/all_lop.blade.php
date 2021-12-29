@@ -52,7 +52,7 @@ echo '<script>alert("'.$message.'");</script> ';
             <div class="card-body">
                 <div class="row">
                     <div class="update ml-4 mr-2">
-                        <button type="submit" class="btn btn-primary btn-round">Thêm Khoa</button>
+                        <button type="submit" class="btn btn-primary btn-round">Thêm Lớp</button>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -74,7 +74,7 @@ echo '<script>alert("'.$message.'");</script> ';
                                     <a href="{{URL::to('/edit-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-ruler-pencil"></i>
                                     </a>
-                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">
+                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-lop/'.$cate_pro->idlop)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-simple-remove"></i>
                                     </a>
                                 </td>

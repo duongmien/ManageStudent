@@ -20,11 +20,11 @@ class LopController extends Controller
     //     $manager_khoa = view('admin.edit_khoa')->with('edit_khoa',$edit_khoa);
     //     return view('admin.edit_khoa', $manager_khoa);
     // }
-    // public function delete_nganh($nganh_id){
-    //     // $this->AuthLogin();
-    //     DB::table('tbl_nganh')->where('idnganh',$nganh_id)->delete();
-    //     Session::put('message','Ngành được xóa thành công!!!');
-    //     return Redirect::to('/all-nganh');
-    // }
+    public function delete_lop($lop_id){
+        // $this->AuthLogin();
+        DB::table('tbl_lopsh')->where('idlop',$lop_id)->delete();
+        Session::put('message','Lớp được xóa thành công!!!');
+        return Redirect::to('/all-lop');
+    }
 
 }
