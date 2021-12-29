@@ -9,9 +9,6 @@ use Illuminate\Http\Request;
 
 class khoaController extends Controller
 {
-    public function findNganh(Request $request){
-        return;
-    }
     public function viewall_khoa(){
         return view('admin.all_khoa');
     }

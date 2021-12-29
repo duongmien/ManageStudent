@@ -13,13 +13,13 @@
             <p>Quản lý sinh viên</p>
         </a>
     </li>
-    <li class="active ">
+    <li>
         <a href="{{URL::to('/all-khoa')}}">
             <i class="nc-icon nc-tile-56"></i>
             <p>Quản lý Khoa</p>
         </a>
     </li>
-    <li>
+    <li class="active ">
         <a href="{{URL::to('/all-nganh')}}">
             <i class="nc-icon nc-istanbul"></i>
             <p>Quản lý Ngành</p>
