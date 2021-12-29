@@ -566,14 +566,14 @@ use Illuminate\Support\Facades\Session;
                       </div>
                     </div>
                   </div>
-                  <div class="col d-flex align-items-center">
+                  <!-- <div class="col d-flex align-items-center">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
                         Diện cấp thẻ miễn phí
                       </label>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
 
                 <div class="row mb-3">
