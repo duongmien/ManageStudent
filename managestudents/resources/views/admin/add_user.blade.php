@@ -13,12 +13,6 @@
             <p>Quản lý sinh viên</p>
         </a>
     </li>
-    <li>
-        <a href="{{URL::to('/all-lop')}}">
-            <i class="nc-icon nc-badge"></i>
-            <p>Quản lý Lớp</p>
-        </a>
-    </li>
 </ul>
 @endsection
 

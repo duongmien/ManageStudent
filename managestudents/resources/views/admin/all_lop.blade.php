@@ -22,7 +22,7 @@ echo '<script>alert("'.$message.'");</script> ';
             <p>Quản lý sinh viên</p>
         </a>
     </li>
-    <li class="active ">
+    <li>
         <a href="{{URL::to('/all-khoa')}}">
             <i class="nc-icon nc-tile-56"></i>
             <p>Quản lý Khoa</p>
@@ -34,7 +34,7 @@ echo '<script>alert("'.$message.'");</script> ';
             <p>Quản lý Ngành</p>
         </a>
     </li>
-    <li>
+    <li class="active">
         <a href="{{URL::to('/all-lop')}}">
             <i class="nc-icon nc-badge"></i>
             <p>Quản lý Lớp</p>
