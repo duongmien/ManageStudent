@@ -21,4 +21,5 @@ Route::post('/check-login','LoginController@check_login');
 Route::get('/logout','LoginController@logout');
 
 Route::get('/dashboard','AdminController@index');
+Route::get('/all-user','AdminController@all_user');
 

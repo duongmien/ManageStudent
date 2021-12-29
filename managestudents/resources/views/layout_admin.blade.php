@@ -18,6 +18,7 @@
   <link href="{{asset('admin/assets/css/paper-dashboard.css?v=2.0.1')}}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{asset('admin/assets/demo/demo.css')}}" rel="stylesheet" />
+  <link href="{{asset('admin/assets/css/styles.css')}}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -38,20 +39,7 @@
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="active ">
-            <a href="./dashboard.html">
-              <i class="nc-icon nc-bank"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li>
-            <a href="./icons.html">
-              <i class="nc-icon nc-diamond"></i>
-              <p>Quản lý sinh viên</p>
-            </a>
-          </li>
-        </ul>
+        @yield('left-nav')
       </div>
     </div>
     <div class="main-panel">

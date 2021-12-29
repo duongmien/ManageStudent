@@ -1,4 +1,22 @@
 @extends('layout_admin')
+@section('left-nav')
+<ul class="nav">
+    <li class="active ">
+    <a href="{{URL::to('/dashboard')}}">
+        <i class="nc-icon nc-bank"></i>
+        <p>Dashboard</p>
+    </a>
+    </li>
+    <li>
+    <a href="{{URL::to('/all-user')}}">
+        <i class="nc-icon nc-diamond"></i>
+        <p>Quản lý sinh viên</p>
+    </a>
+    </li>
+</ul>
+@endsection
+
+@extends('layout_admin')
 @section('admin_content')
 <div class="container-fluid">
     <div class="navbar-wrapper">
