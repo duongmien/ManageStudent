@@ -13,6 +13,12 @@
         <p>Quản lý sinh viên</p>
     </a>
     </li>
+    <li>
+    <a href="{{URL::to('/all-khoa')}}">
+        <i class="nc-icon nc-tile-56"></i>
+        <p>Quản lý Khoa</p>
+    </a>
+    </li>
 </ul>
 @endsection
 
