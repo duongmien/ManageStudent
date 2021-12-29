@@ -89,7 +89,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Ngành:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm nganh" name="nganh" aria-label="Default select example">
+                        <select class="form-control form-control-sm nganh" disabled name="nganh" aria-label="Default select example">
                           <option selected>--Ngành--</option>
                           @foreach($allnganh as $n)
                             @if($in->nganh==$n->idnganh)
@@ -104,7 +104,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Sinh ngày:</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                        <select class="form-control form-control-sm" name="ds" aria-label="Default select example">
+                        <select class="form-control form-control-sm"disabled name="ds" aria-label="Default select example">
                         @for ($i = 1; $i < 32; $i++)
                           @if($d2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -114,7 +114,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-control form-control-sm" name="ms" aria-label="Default select example">
+                        <select class="form-control form-control-sm"disabled name="ms" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
                           @if($m2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -124,7 +124,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-control form-control-sm px-0" name="ys" aria-label="Default select example">
+                        <select class="form-control form-control-sm px-0"disabled name="ys" aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
                           @if($y2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -140,7 +140,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label for="inputEmail1"  class="col-sm-4 col-form-label">Lớp:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm lop" name="lop" aria-label="Default select example">
+                        <select class="form-control form-control-sm lop"disabled name="lop" aria-label="Default select example">
                           <option selected>--Lớp--</option>
                           @foreach($alllopsh as $n)
                             @if($in->lop==$n->idlop)
@@ -155,7 +155,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khoa:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm lop" name="khoa" aria-label="Default select example">
+                        <select class="form-control form-control-sm lop"disabled name="khoa" aria-label="Default select example">
                           <option selected>--Khoa--</option>
                           @foreach($allkhoa as $n)
                             @if($in->khoa==$n->idkhoa)
@@ -176,7 +176,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label class="col-sm-4 col-form-label">Giới tính:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" name="gioitinh" aria-label="Default select example">
+                        <select class="form-control form-control-sm"disabled name="gioitinh" aria-label="Default select example">
                           @if($in->gioitinh=="Nam")
                           <option value="Nam" selected>Nam</option>
                           @else
