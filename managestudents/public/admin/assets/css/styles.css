@@ -9,3 +9,7 @@ i.nc-icon.nc-ruler-pencil {
 i.nc-icon.nc-simple-remove {
     color: red;
 }
+
+body {
+    min-height: 100vh;
+}

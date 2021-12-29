@@ -16,7 +16,6 @@
 </ul>
 @endsection
 
-@extends('layout_admin')
 @section('admin_content')
 <div class="container-fluid">
     <div class="navbar-wrapper">

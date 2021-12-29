@@ -18,7 +18,7 @@
 
 @section('admin_content')
 <main class="my-infobox">
-      <form  class="px-4" role="form" action="{{URL::to('/)}}" method="POST" enctype="multipart/form-data">
+      <form  class="px-4" role="form" action="{{URL::to('/')}}" method="POST" enctype="multipart/form-data">
         @csrf   
         <input type="hidden" name="token" value="{{ csrf_token() }}">
         <div class="container-fluid bg-white">

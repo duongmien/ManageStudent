@@ -16,7 +16,6 @@
 </ul>
 @endsection
 
-@extends('layout_admin')
 @section('admin_content')
 <div class="row">
     <div class="col-md-12">
@@ -26,11 +25,10 @@
         </div>
         <div class="card-body">
         <div class="row">
-                    <div class="update ml-4 mr-2">
-                      <button type="submit" class="btn btn-primary btn-round">Thêm Sinh Viên</button>
-                    </div>
-
-                  </div>
+            <div class="update ml-4 mr-2">
+                <button type="submit" class="btn btn-primary btn-round">Thêm Sinh Viên</button>
+            </div>
+        </div>
         <div class="table-responsive">
             <table class="table">
             <thead class=" text-primary">
