@@ -23,7 +23,7 @@ class khoaController extends Controller
     public function delete_khoa($khoa_id){
         // $this->AuthLogin();
         DB::table('tbl_khoa')->where('idkhoa',$khoa_id)->delete();
-        Session::put('message','Xóa danh mục sản phẩm thành công!!!');
+        Session::put('message','Khoa được xóa thành công !!!');
         return Redirect::to('/all-khoa');
     }
 

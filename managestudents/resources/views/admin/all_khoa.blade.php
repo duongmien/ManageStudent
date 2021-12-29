@@ -1,3 +1,12 @@
+<?php
+use Illuminate\Support\Facades\Session;
+$message = Session::get('message');
+if($message){
+
+echo '<script>alert("'.$message.'");</script> ';
+    Session::put('message',null);
+}
+?>
 @extends('layout_admin')
 @section('left-nav')
 <ul class="nav">

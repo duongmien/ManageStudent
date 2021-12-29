@@ -1,5 +1,14 @@
 @extends('layout_admin')
 @section('left-nav')
+<?php
+use Illuminate\Support\Facades\Session;
+$message = Session::get('message');
+if($message){
+
+echo '<script>alert("'.$message.'");</script> ';
+    Session::put('message',null);
+}
+?>
 <ul class="nav">
     <li>
         <a href="{{URL::to('/dashboard')}}">
@@ -59,7 +68,7 @@
                                     <a href="{{URL::to('/edit-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-ruler-pencil"></i>
                                     </a>
-                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">
+                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-nganh/'.$cate_pro->idnganh)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-simple-remove"></i>
                                     </a>
                                 </td>
