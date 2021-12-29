@@ -11,8 +11,8 @@ class LopController extends Controller
 {
     public function all_lop(){
         // $this->AuthLogin();
-        $all_nganh = DB::table('tbl_lopsh')->join('tbl_nganh','tbl_lopsh.idnganh','=','tbl_nganh.idnganh')->orderBy('tbl_nganh.idnganh','desc')->get();
-        return view('admin.all_nganh',compact('all_nganh'));
+        $all_lop = DB::table('tbl_lopsh')->join('tbl_nganh','tbl_lopsh.idnganh','=','tbl_nganh.idnganh')->orderBy('tbl_nganh.idnganh','desc')->get();
+        return view('admin.all_lop',compact('all_lop'));
     }
     // public function edit_khoa($khoa_id){
     //     // $this->AuthLogin();
