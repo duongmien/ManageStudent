@@ -17,10 +17,9 @@ class khoaController extends Controller
     }
 
     public function all_khoa(){
-        $this->AuthLogin();
+        // $this->AuthLogin();
         $all_khoa = DB::table('tbl_khoa')->get();
-        $manager_khoa = view('admin.all_khoa')->with('all_khoa',$all_khoa);
-        return view('admin_layout')->with('admin.all_khoa', $manager_khoa);
+        return view('admin.all_khoa',compact('all_khoa'));
     }
 
 }
