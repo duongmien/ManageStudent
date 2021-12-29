@@ -104,8 +104,8 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Sinh ngày:</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                      <select class="form-control form-control-sm" name="ds"aria-label="Default select example">
-                      @for ($i = 1; $i < 32; $i++)
+                        <select class="form-control form-control-sm" name="ds" aria-label="Default select example">
+                        @for ($i = 1; $i < 32; $i++)
                           @if($d2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
                           @else
@@ -114,7 +114,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm" name="ms" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
                           @if($m2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -124,7 +124,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-control form-control-sm px-0" aria-label="Default select example">
+                        <select class="form-control form-control-sm px-0" name="ys" aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
                           @if($y2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -351,7 +351,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Ngày cấp(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                      <select class="form-control form-control-sm" aria-label="Default select example">
+                      <select class="form-control form-control-sm" name="dc" aria-label="Default select example">
                         
                         @for ($i = 1; $i < 32; $i++)
                           @if($d1==$i)
@@ -362,7 +362,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm"name="mc" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
                           @if($m1==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -372,7 +372,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-control form-control-sm px-0" aria-label="Default select example">
+                        <select class="form-control form-control-sm px-0" name="yc"aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
                          @if($y1==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -499,7 +499,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Hiệu lực bảo hiểm(*):</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                      <select class="form-control form-control-sm" aria-label="Default select example">
+                      <select class="form-control form-control-sm"name="dh" aria-label="Default select example">
                         
                         @for ($i = 1; $i < 32; $i++)
                           @if($d==$i)
@@ -510,7 +510,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm"name="mh" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
                           @if($m==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -520,7 +520,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-control form-control-sm px-0" aria-label="Default select example">
+                        <select class="form-control form-control-sm px-0" name="yh"aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
                          @if($y==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>

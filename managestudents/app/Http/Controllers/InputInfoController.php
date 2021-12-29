@@ -25,17 +25,21 @@ class InputInfoController extends Controller
     }
 
     public function update_info(Request $request ,$id){
+        $d = $request->ms."/".$request->ds."/".$request->ys;
+        $d1 = $request->mc."/".$request->dc."/".$request->yc;
+        $d2 = $request->mh."/".$request->dh."/".$request->yh;
+        echo $d;
         $data = array();
         $data['name'] = $request->name;
         $data['lop'] = $request->lop;
         $data['nganh'] = $request->nganh;
         $data['khoa'] = $request->khoa;
-        $data['ngaysinh'] = $request->ngaysinh;
+        $data['ngaysinh'] = $d;
         $data['gioitinh'] = $request->gioitinh;
         $data['tongiao'] = $request->tongiao;
         $data['dantoc'] = $request->dantoc;
         $data['cmnd'] = $request->cmnd;
-        $data['ngaycap'] = $request->ngaycap;
+        $data['ngaycap'] = $d1;
         $data['noicap'] = $request->noicap;
         $data['noisinh'] = $request->noisinh;
         $data['email'] = $request->email;
@@ -46,7 +50,7 @@ class InputInfoController extends Controller
         $data['huyen'] = $request->huyen;
         $data['xa'] = $request->xa;
         $data['sobaohiem'] = $request->sobaohiem;
-        $data['hieuluc'] = $request->hieuluc;
+        $data['hieuluc'] = $d2;
         $data['nganhang'] = $request->nganhang;
         $data['stk'] = $request->stk;
         $data['khuvuc'] = $request->khuvuc;
