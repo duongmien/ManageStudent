@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 class khoaController extends Controller
 {
-    public function viewall_khoa(){
-        return view('admin.all_khoa');
-    }
-
     public function all_khoa(){
         // $this->AuthLogin();
         $all_khoa = DB::table('tbl_khoa')->get();

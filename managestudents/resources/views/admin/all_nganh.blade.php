@@ -44,14 +44,16 @@
                     <table class="table">
                         <thead class=" text-primary">
                             <th class="text-center">STT</th>
-                            <th class="text-center">Tên Ngành</th>
+                            <th class="text-center">Tên Khoa</th>
+                            <th class="text-center">Tên Ngành</th>   
                         </thead>
                         <tbody>
                             <tr>
                                 <?php $i = 1; ?>
-                                @foreach($all_khoa as $key => $cate_pro)
+                                @foreach($all_nganh as $key => $cate_pro)
                             <tr>
                                 <td class="text-center"><?php echo $i++; ?></td>
+                                <td class="text-center">{{$cate_pro->tenkhoa}}</td>
                                 <td class="text-center">{{$cate_pro->tennganh}}</td>
                                 <td class="text-center">
                                     <a href="{{URL::to('/edit-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">

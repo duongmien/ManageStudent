@@ -11,7 +11,7 @@ class NganhController extends Controller
 {
     public function all_nganh(){
         // $this->AuthLogin();
-        $all_khoa = DB::table('tbl_nganh')->get();
+        $all_nganh = DB::table('tbl_nganh')->join('tbl_khoa','tbl_khoa.idkhoa','=','tbl_nganh.idkhoa')->orderBy('tbl_nganh.idkhoa','desc')->get();
         return view('admin.all_nganh',compact('all_nganh'));
     }
     // public function edit_khoa($khoa_id){
