@@ -80,12 +80,12 @@ use Illuminate\Support\Facades\Session;
                         <input   value="{{$in->name}}" name="name" readonly="readonly"class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
-                    <div class="row mb-3">
+                    <!-- <div class="row mb-3">
                       <label for="inputEmail2" class="col-sm-4 col-form-label">Chương trình đào tạo:</label>
                       <div class="col-sm-8">
                         <input  readonly="readonly"   class="form-control form-control-sm" id="inputEmail2">
                       </div>
-                    </div>
+                    </div> -->
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Ngành:</label>
                       <div class="col-sm-8">
@@ -167,12 +167,12 @@ use Illuminate\Support\Facades\Session;
                         </select> 
                       </div>
                     </div>
-                    <div class="row mb-3">
+                    <!-- <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Chuyên ngành:</label>
                       <div class="col-sm-8">
                         <input  class="form-control form-control-sm" id="inputEmail1">
                       </div>
-                    </div>
+                    </div> -->
                     <div class="row mb-3">
                       <label class="col-sm-4 col-form-label">Giới tính:</label>
                       <div class="col-sm-8">

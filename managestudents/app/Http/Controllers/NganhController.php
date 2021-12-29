@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Http\Request;
 
-class khoaController extends Controller
+class NganhController extends Controller
 {
     public function all_nganh(){
         // $this->AuthLogin();

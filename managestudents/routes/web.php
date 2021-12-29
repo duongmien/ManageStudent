@@ -31,3 +31,6 @@ Route::get('/all-khoa','khoaController@all_khoa');
 Route::get('/edit-khoa','khoaController@edit_khoa');
 Route::get('/delete-khoa/{idkhoa}','khoaController@delete_khoa');
 
+// Nganh
+Route::get('/all-nganh','NganhController@all_nganh');
+
