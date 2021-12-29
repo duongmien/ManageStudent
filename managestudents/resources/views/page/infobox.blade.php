@@ -34,7 +34,10 @@ use Illuminate\Support\Facades\Session;
       </symbol>
     </svg>
     <main class="my-infobox">
-      <form class="px-4">
+       @foreach($info as $key => $in)
+      <form  class="px-4" role="form" action="{{URL::to('/update-info/'.$in->id)}}" method="POST" enctype="multipart/form-data">
+        @csrf   
+        <input type="hidden" name="token" value="{{ csrf_token() }}">
         <div class="container-fluid bg-white">
           <div class="row mx-3">
             <div class="col">
@@ -44,7 +47,6 @@ use Illuminate\Support\Facades\Session;
           <div class="row content-container mt-3 mx-3">
             <div class="col">
               <div class="container-fuild pt-3 position-relative">
-              @foreach($info as $key => $in)
               <?php 
                           $time = strtotime($in->hieuluc);
                           $d = date('d',$time);
@@ -63,11 +65,11 @@ use Illuminate\Support\Facades\Session;
                 <div class="row">
                   <div class="col-3 d-flex align-items-center justify-content-center">
                     <div class="avatar-wrapper">
-                      <img class="profile-pic" src="" />
+                      <img class="profile-pic" src="{{URL::to('uploads/user/'.$in->anh)}}" />
                       <div class="upload-button">
                         <i class="fas fa-arrow-circle-up" aria-hidden="true"></i>
                       </div>
-                      <input class="file-upload" type="file" accept="img/*"/>
+                      <input class="file-upload" type="file" name="anh" accept="img/*"/>
                     </div>
                   </div>
                   <!-- sinhvien -->
@@ -75,25 +77,34 @@ use Illuminate\Support\Facades\Session;
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Họ và tên:</label>
                       <div class="col-sm-8">
-                        <input type="email"  value="{{$in->name}}" readonly="readonly"class="form-control form-control-sm" id="inputEmail1">
+                        <input   value="{{$in->name}}" name="name" readonly="readonly"class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail2" class="col-sm-4 col-form-label">Chương trình đào tạo:</label>
                       <div class="col-sm-8">
-                        <input type="email" readonly="readonly" value="{{$in->nganh}}" class="form-control form-control-sm" id="inputEmail2">
+                        <input  readonly="readonly"   class="form-control form-control-sm" id="inputEmail2">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Ngành:</label>
                       <div class="col-sm-8">
-                        <input type="email" readonly="readonly"value="{{$in->nganh}}" class="form-control form-control-sm" id="inputEmail3">
+                        <select class="form-control form-control-sm nganh" name="nganh" aria-label="Default select example">
+                          <option selected>--Ngành--</option>
+                          @foreach($allnganh as $n)
+                            @if($in->nganh==$n->idnganh)
+                            <option selected value="{{$n->idnganh}}">{{$n->tennganh}}</option>
+                            @else
+                            <option value="{{$n->idnganh}}">{{$n->tennganh}}</option>
+                            @endif
+                          @endforeach
+                        </select> 
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-4 col-form-label">Sinh ngày:</label>
                       <div class="col-sm-8 d-flex align-items-center">
-                      <select class="form-control form-control-sm"disabled="true" aria-label="Default select example">
+                      <select class="form-control form-control-sm" name="ds"aria-label="Default select example">
                       @for ($i = 1; $i < 32; $i++)
                           @if($d2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -103,7 +114,7 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Tháng:</span>
-                        <select class="form-control form-control-sm"disabled="true" aria-label="Default select example">
+                        <select class="form-control form-control-sm" aria-label="Default select example">
                         @for ($i = 1; $i < 13; $i++)
                           @if($m2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
@@ -113,9 +124,9 @@ use Illuminate\Support\Facades\Session;
                         @endfor
                         </select>
                         <span class="mx-1">Năm:</span>
-                        <select class="form-control form-control-sm px-0"disabled="true" aria-label="Default select example">
+                        <select class="form-control form-control-sm px-0" aria-label="Default select example">
                         @for ($i = 2021; $i >= 1980; $i--)
-                         @if($y2==$i)
+                          @if($y2==$i)
                           <option selected value="<?php echo $i?>"><?php echo $i?></option>
                           @else
                           <option value="<?php echo $i?>"><?php echo $i?></option>
@@ -127,41 +138,59 @@ use Illuminate\Support\Facades\Session;
                   </div>
                   <div class="col-4">
                     <div class="row mb-3">
-                      <label for="inputEmail1" class="col-sm-4 col-form-label">Lớp:</label>
+                      <label for="inputEmail1"  class="col-sm-4 col-form-label">Lớp:</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm"value="{{$in->lop}}" readonly="readonly"  id="inputEmail1">
+                        <select class="form-control form-control-sm lop" name="lop" aria-label="Default select example">
+                          <option selected>--Lớp--</option>
+                          @foreach($alllopsh as $n)
+                            @if($in->lop==$n->idlop)
+                            <option selected value="{{$n->idlop}}">{{$n->tenlop}}</option>
+                            @else
+                            <option value="{{$n->idlop}}">{{$n->tenlop}}</option>
+                            @endif
+                          @endforeach
+                        </select> 
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khoa:</label>
                       <div class="col-sm-8">
-                        <input type="email" readonly="readonly"value="{{$in->khoa}}" class="form-control form-control-sm" id="inputEmail1">
+                        <select class="form-control form-control-sm lop" name="khoa" aria-label="Default select example">
+                          <option selected>--Khoa--</option>
+                          @foreach($allkhoa as $n)
+                            @if($in->khoa==$n->idkhoa)
+                            <option selected value="{{$n->idkhoa}}">{{$n->tenkhoa}}</option>
+                            @else
+                            <option value="{{$n->idkhoa}}">{{$n->tenkhoa}}</option>
+                            @endif
+                          @endforeach
+                        </select> 
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Chuyên ngành:</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input  class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label class="col-sm-4 col-form-label">Giới tính:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" disabled="true" aria-label="Default select example">
+                        <select class="form-control form-control-sm" name="gioitinh" aria-label="Default select example">
                           @if($in->gioitinh=="Nam")
-                          <option value="1" selected>Nam</option>
+                          <option value="Nam" selected>Nam</option>
                           @else
-                          <option value="1">Nam</option>
+                          <option value="Nam">Nam</option>
                           @endif
                           @if($in->gioitinh=="Nữ")
-                          <option value="2" selected>Nữ</option>
+                          <option value="Nữ" selected>Nữ</option>
                           @else
-                          <option value="2">Nữ</option>
+                          <option value="Nữ">Nữ</option>
                           @endif
                           @if($in->gioitinh=="Khác")
-                          <option value="3" selected>Khác</option>
+                          <option value="Khác" selected>Khác</option>
                           @else
-                          <<option value="3">Khác</option>
+                          <<option value="Khác">Khác</option>
                           @endif
                         </select>
                       </div>
@@ -267,7 +296,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tôn giáo(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm"name="tongiao" aria-label="Default select example">
                           <option>--Tôn giáo</option>
                           @foreach($tg as $t)
                             @if($in->tongiao==$t->tentg)
@@ -284,7 +313,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Dân tộc:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm" name="dantoc" aria-label="Default select example">
                           <option>--Dân tộc</option>
                           @foreach($dt as $t)
                             @if($in->dantoc==$t->tendt)
@@ -301,7 +330,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quốc tịch:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm"readonly="readonly"disabled="true" aria-label="Default select example">
+                        <select class="form-control form-control-sm"readonly="readonly" aria-label="Default select example">
                           <option selected>Việt Nam</option>
                         </select>
                       </div>
@@ -314,7 +343,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Số CMND/CCCD(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->cmnd}}"  class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->cmnd}}" name="cmnd" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -359,7 +388,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Nơi cấp(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->noicap}}"  class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->noicap}}" name="noicap" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -370,7 +399,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Nơi sinh (Tỉnh/Tp) (*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->noisinh}}" class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->noisinh}}" name="noisinh"class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -378,7 +407,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Email(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->email}}" class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->email}}" name="email" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -386,7 +415,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Điện thoại(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->dienthoai}}" class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->dienthoai}}" name="dienthoai" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -397,7 +426,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Hộ khẩu thường trú(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->hokhau}}" class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->hokhau}}" name="hokhau" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -405,7 +434,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Là địa chỉ của (*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm" name="ladiachicua" aria-label="Default select example">
                           <option >Chọn</option>
                           @foreach($dcc as $dcc)
                             @if($in->ladiachicua==$dcc->tendcc)
@@ -426,7 +455,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tỉnh/Thành Phố(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example" id="provinve-city">
+                        <select class="form-control form-control-sm" name="tinh" aria-label="Default select example" id="provinve-city">
                           <!-- <option selected>Open</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
@@ -439,7 +468,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Quận/Huyện(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example" id="district">
+                        <select class="form-control form-control-sm" name="huyen" aria-label="Default select example" id="district">
                         <option value="0">--Chọn quận, huyện</option>
                         </select>
                       </div>
@@ -449,7 +478,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Xã/Phường(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example" id="ward">
+                        <select class="form-control form-control-sm" name="xa" aria-label="Default select example" id="ward">
                         <option value="0">--Chọn phường, xã</option>
                         </select>
                       </div>
@@ -462,7 +491,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Số bảo hiểm(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->sobaohiem}}" class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->sobaohiem}}" name="sobaohiem" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -518,9 +547,13 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Tài khoản ngân hàng:</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm" name="nganhang"aria-label="Default select example">
                           <option selected>Chọn</option>
-                          <option value="1">VietTinBank</option>
+                            @if($in->nganhang=="VietTinBank")
+                            <option selected value="VietTinBank">VietTinBank</option>
+                            @else
+                            <option value="VietTinBank">VietTinBank</option>
+                            @endif
                         </select>
                       </div>
                     </div>
@@ -529,7 +562,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Số tài khoản:</label>
                       <div class="col-sm-8">
-                        <input type="email" value="{{$in->stk}}" class="form-control form-control-sm" id="inputEmail1">
+                        <input  value="{{$in->stk}}"name="stk" class="form-control form-control-sm" id="inputEmail1">
                       </div>
                     </div>
                   </div>
@@ -548,7 +581,7 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Khu vực tuyển sinh(*):</label>
                       <div class="col-sm-8">
-                        <select class="form-control form-control-sm" aria-label="Default select example">
+                        <select class="form-control form-control-sm" name="khuvuc"aria-label="Default select example">
                           <option>--Chọn khu vực</option>
                           @foreach($kv as $k)
                             @if($in->khuvuc==$k->tenkv)
@@ -565,22 +598,22 @@ use Illuminate\Support\Facades\Session;
                     <div class="row">
                       <label for="inputEmail1" class="col-sm-4 col-form-label">Đối tượng tuyển sinh(*):</label>
                       <div class="col-sm-8">
-                        <input type="email" class="form-control form-control-sm" id="inputEmail1">
+                        <input  class="form-control form-control-sm" value="{{$in->doituong}}" name="doituong" id="inputEmail1">
                       </div>
                     </div>
                   </div>
                   <div class="col"></div>
                 </div>
-                @endforeach
               </div>
             </div>
           </div>
   
         </div>
         <div class="d-flex justify-content-center mt-3 mx-3">
-            <button type="button" class="btn btn-light font-weight-bold">Submit Form</button>
+            <button type="submit" class="btn btn-light font-weight-bold">Submit Form</button>
           </div>
       </form>
+      @endforeach
     </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -616,7 +649,7 @@ use Illuminate\Support\Facades\Session;
           listSelect.push(`<option value="0" selected>--Chọn tỉnh, thành phố</option>`)
           var nametinh = "<?php foreach($info as $key => $in) echo $in->tinh ?>"
           for (let index = 0; index < data.length; index++) {
-            if(data[index].name==nametinh){
+            if(data[index].code==nametinh){
               let newSelect = `<option selected value="${data[index].code}">${data[index].name}</option>`
               listSelect.push(newSelect)
             }else{
@@ -635,7 +668,7 @@ use Illuminate\Support\Facades\Session;
             listSelect.push(`<option value="0">--Chọn quận, huyện</option>`)
             var namehuyen = "<?php foreach($info as $key => $in) echo $in->huyen ?>"
             for (let index = 0; index < district.length; index++) {
-              if(district[index].name==namehuyen){
+              if(district[index].code==namehuyen){
                 let newSelect = `<option selected value="${district[index].code}">${district[index].name}</option>`
                 listSelect.push(newSelect)
             }else{

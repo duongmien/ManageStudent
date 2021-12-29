@@ -23,4 +23,47 @@ class InputInfoController extends Controller
         $kv = DB::table('tbl_khuvuctuyensinh')->get();
         return view('page.infobox',compact('allnganh','allkhoa','alllopsh','info','tg','dt','kv','dcc'));
     }
+
+    public function update_info(Request $request ,$id){
+        $data = array();
+        $data['name'] = $request->name;
+        $data['lop'] = $request->lop;
+        $data['nganh'] = $request->nganh;
+        $data['khoa'] = $request->khoa;
+        $data['ngaysinh'] = $request->ngaysinh;
+        $data['gioitinh'] = $request->gioitinh;
+        $data['tongiao'] = $request->tongiao;
+        $data['dantoc'] = $request->dantoc;
+        $data['cmnd'] = $request->cmnd;
+        $data['ngaycap'] = $request->ngaycap;
+        $data['noicap'] = $request->noicap;
+        $data['noisinh'] = $request->noisinh;
+        $data['email'] = $request->email;
+        $data['dienthoai'] = $request->dienthoai;
+        $data['hokhau'] = $request->hokhau;
+        $data['ladiachicua'] = $request->ladiachicua;
+        $data['tinh'] = $request->tinh;
+        $data['huyen'] = $request->huyen;
+        $data['xa'] = $request->xa;
+        $data['sobaohiem'] = $request->sobaohiem;
+        $data['hieuluc'] = $request->hieuluc;
+        $data['nganhang'] = $request->nganhang;
+        $data['stk'] = $request->stk;
+        $data['khuvuc'] = $request->khuvuc;
+        $data['doituong'] = $request->doituong;
+        $get_image = $request->file('anh');
+        if($get_image){
+            $get_name_image = $get_image->getClientOriginalName();
+            $name_image = current(explode('.',$get_name_image));
+            $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
+            $get_image->move('uploads/user',$new_image);
+            $data['anh'] = $new_image;
+            DB::table('tbl_user')->where('id',$id)->update($data);
+            Session::put('message','Cập nhật thông tin thành công!!!');
+            return Redirect::to('/inputinfo');
+        }
+        DB::table('tbl_user')->where('id',$id)->update($data);
+            Session::put('message','Cập nhật thông tin thành công!!!');
+            return Redirect::to('/inputinfo');
+    }
 }
