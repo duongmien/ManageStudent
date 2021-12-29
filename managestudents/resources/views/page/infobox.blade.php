@@ -65,11 +65,12 @@ use Illuminate\Support\Facades\Session;
                 <div class="row">
                   <div class="col-3 d-flex align-items-center justify-content-center">
                     <div class="avatar-wrapper">
+                    <input class="file-upload" type="file" name="anh" accept="img/*"/>
                       <img class="profile-pic" src="{{URL::to('uploads/user/'.$in->anh)}}" />
                       <div class="upload-button">
                         <i class="fas fa-arrow-circle-up" aria-hidden="true"></i>
                       </div>
-                      <input class="file-upload" type="file" name="anh" accept="img/*"/>
+                      
                     </div>
                   </div>
                   <!-- sinhvien -->
@@ -726,7 +727,5 @@ use Illuminate\Support\Facades\Session;
           });
         })
       });
-    </script>
-    <script>
     </script>
 @endsection
