@@ -52,7 +52,7 @@ echo '<script>alert("'.$message.'");</script> ';
             <div class="card-body">
                 <div class="row">
                     <div class="update ml-4 mr-2">
-                        <button type="submit" class="btn btn-primary btn-round">Thêm Khoa</button>
+                        <a href="{{URL::to('/add-khoa')}}" style="color: #fff;" class="btn btn-primary btn-round">Thêm Khoa</a>
                     </div>
                 </div>
                 <div class="table-responsive">
