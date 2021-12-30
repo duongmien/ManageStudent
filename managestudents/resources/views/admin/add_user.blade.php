@@ -13,6 +13,24 @@
             <p>Quản lý sinh viên</p>
         </a>
     </li>
+    <li>
+        <a href="{{URL::to('/all-khoa')}}">
+            <i class="nc-icon nc-tile-56"></i>
+            <p>Quản lý Khoa</p>
+        </a>
+    </li>
+    <li>
+        <a href="{{URL::to('/all-nganh')}}">
+            <i class="nc-icon nc-istanbul"></i>
+            <p>Quản lý Ngành</p>
+        </a>
+    </li>
+    <li>
+        <a href="{{URL::to('/all-lop')}}">
+            <i class="nc-icon nc-badge"></i>
+            <p>Quản lý Lớp</p>
+        </a>
+    </li>
 </ul>
 @endsection
 

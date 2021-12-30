@@ -21,10 +21,14 @@ Route::post('/update-info/{id}','InputInfoController@update_info');
 Route::post('/check-login','LoginController@check_login');
 Route::get('/logout','LoginController@logout');
 
+//admin
 Route::get('/dashboard','AdminController@index');
-Route::get('/all-user','AdminController@all_user');
-Route::get('/add-user','AdminController@add_user');
-Route::post('/edit-user','AdminController@edit_user');
+
+//admin.user
+Route::get('/all-user','UserController@all_user');
+Route::get('/add-user','UserController@add_user');
+Route::post('/edit-user','UserController@edit_user');
+Route::post('/delete-user','UserController@edit_user');
 
 // Khoa
 Route::get('/all-khoa','khoaController@all_khoa');

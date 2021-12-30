@@ -44,7 +44,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="update ml-4 mr-2">
-                        <button type="submit" class="btn btn-primary btn-round">Thêm Sinh Viên</button>
+                        <button onclick="location.href=`{{URL::to('/add-user')}}`" type="submit" class="btn btn-primary btn-round">Thêm Sinh Viên</button>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -58,12 +58,14 @@
                             <th class="text-center">Cập nhật</th>
                         </thead>
                         <tbody>
+                            <?php $i = 1; ?>
+                            @foreach($alluser as $key => $u)
                             <tr>
-                                <td class="text-center">1</td>
-                                <td class="text-center">1911505310146</td>
-                                <td class="text-center">Nguyễn Hồng Sơn</td>
-                                <td class="text-center">19T1</td>
-                                <td class="text-center"><img src="uploads/user/342.jpg" height="80" width="80" /></td>
+                                <td class="text-center"><?php echo $i++; ?></td>
+                                <td class="text-center">{{$u->idsv}}</td>
+                                <td class="text-center">{{$u->name}}</td>
+                                <td class="text-center">{{$u->lop}}</td>
+                                <td class="text-center"><img src="{{URL::to('uploads/user/'.$u->anh)}}" height="80" width="80" /></td>
                                 <td class="text-center">
                                     <a href="" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-ruler-pencil"></i>
@@ -73,7 +75,7 @@
                                     </a>
                                 </td>
                             </tr>
-
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
