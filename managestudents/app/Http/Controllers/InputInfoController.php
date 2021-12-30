@@ -28,7 +28,6 @@ class InputInfoController extends Controller
         $d = $request->ms."/".$request->ds."/".$request->ys;
         $d1 = $request->mc."/".$request->dc."/".$request->yc;
         $d2 = $request->mh."/".$request->dh."/".$request->yh;
-        echo $d;
         $data = array();
         $data['name'] = $request->name;
         $data['lop'] = $request->lop;

@@ -23,7 +23,15 @@
   <link href="{{asset('admin/assets/demo/demo.css')}}" rel="stylesheet" />
   <link href="{{asset('admin/assets/css/styles.css')}}" rel="stylesheet" />
 </head>
+<?php
+use Illuminate\Support\Facades\Session;
+$message = Session::get('message');
+if($message){
 
+echo '<script>alert("'.$message.'");</script> ';
+    Session::put('message',null);
+}
+?>
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
