@@ -1,14 +1,7 @@
-<?php
-use Illuminate\Support\Facades\Session;
-$message = Session::get('message');
-if($message){
 
-echo '<script>alert("'.$message.'");</script> ';
-    Session::put('message',null);
-}
-?>
 @extends('layout_admin')
 @section('left-nav')
+
 <ul class="nav">
     <li>
         <a href="{{URL::to('/dashboard')}}">
@@ -43,6 +36,7 @@ echo '<script>alert("'.$message.'");</script> ';
 </ul>
 @endsection
 @section('admin_content')
+
 <div class="row">
     <div class="col-md-12">
         <div class="card">
