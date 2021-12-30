@@ -40,13 +40,18 @@ class UserController extends Controller
         Session::put('message','Cập nhật thông tin thành công!!!');
         return Redirect::to('all-user');
     }
-    public function edit_user()
+    public function edit_user($id)
     {
-        $id = Session::get('id');
         $allnganh = DB::table('tbl_nganh')->get();
         $allkhoa = DB::table('tbl_khoa')->get();
         $alllopsh = DB::table('tbl_lopsh')->get();
-        return view('admin.edit_user',compact('allnganh','allkhoa','alllopsh'));
+        $info = DB::table('tbl_user')->where('id',$id)->get();
+        $tg = DB::table('tbl_tongiao')->get();
+        $dt = DB::table('tbl_dantoc')->get();
+        $dcc = DB::table('tbl_diachicua')->get();
+        $kv = DB::table('tbl_khuvuctuyensinh')->get();
+        return view('admin.edit_user',compact('allnganh','allkhoa','alllopsh','info','tg','dt','kv','dcc'));
+    
     }
     public function delete_user($id)
     {
