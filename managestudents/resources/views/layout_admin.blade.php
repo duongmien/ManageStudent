@@ -38,7 +38,7 @@ echo '<script>alert("'.$message.'");</script> ';
       <div class="logo">
         <a href="https://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="{{('admin/assets/img/logo-small.png')}}">
+            <img src="{{asset('admin/assets/img/logo-small.png')}}">
           </div>
           <!-- <p>CT</p> -->
         </a>

@@ -39,7 +39,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title"> Simple Table</h4>
+                <h4 class="card-title"> Danh sách sinh viên</h4>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -64,7 +64,17 @@
                                 <td class="text-center"><?php echo $i++; ?></td>
                                 <td class="text-center">{{$u->idsv}}</td>
                                 <td class="text-center">{{$u->name}}</td>
-                                <td class="text-center">{{$u->lop}}</td>
+                                <td class="text-center">
+                            @foreach($alllop as $key => $l)
+
+                                    <?php 
+                                        if($l->idlop==$u->lop){
+                                            echo $l->tenlop;
+                                        
+                                    }?>
+                                    @endforeach
+                                </td>
+
                                 <td class="text-center"><img src="{{URL::to('uploads/user/'.$u->anh)}}" height="80" width="80" /></td>
                                 <td class="text-center">
                                     <a href="{{URL::to('/edit-user/'.$u->id)}}" class="active styling-edit" ui-toggle-class="">

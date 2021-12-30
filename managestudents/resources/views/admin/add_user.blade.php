@@ -161,7 +161,7 @@
             </div>
             <div class="row">
                 <div class="update ml-auto mr-auto">
-                    <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
+                    <button type="submit" class="btn btn-primary btn-round">Thêm mới</button>
                 </div>
             </div>
         </div>
