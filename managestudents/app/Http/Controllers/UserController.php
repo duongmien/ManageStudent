@@ -22,7 +22,6 @@ class UserController extends Controller
         $allkhoa = DB::table('tbl_khoa')->get();
         $alllopsh = DB::table('tbl_lopsh')->get();
         return view('admin.add_user',compact('allnganh','allkhoa','alllopsh'));
-       
     }
     public function save_user(Request $request)
     {
@@ -43,10 +42,16 @@ class UserController extends Controller
     }
     public function edit_user()
     {
-        return view('admin.edit_user');
+        $id = Session::get('id');
+        $allnganh = DB::table('tbl_nganh')->get();
+        $allkhoa = DB::table('tbl_khoa')->get();
+        $alllopsh = DB::table('tbl_lopsh')->get();
+        return view('admin.edit_user',compact('allnganh','allkhoa','alllopsh'));
     }
-    public function delete_user()
+    public function delete_user($id)
     {
-        return view('admin.edit_user');
+        DB::table('tbl_user')->where('id',$id)->delete();
+        Session::put('message','Xóa sinh viên thành công !!!');
+        return Redirect::to('/all-user');
     }
 }

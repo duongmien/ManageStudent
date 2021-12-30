@@ -67,10 +67,10 @@
                                 <td class="text-center">{{$u->lop}}</td>
                                 <td class="text-center"><img src="{{URL::to('uploads/user/'.$u->anh)}}" height="80" width="80" /></td>
                                 <td class="text-center">
-                                    <a href="" class="active styling-edit" ui-toggle-class="">
+                                    <a href="{{URL::to('/edit-user/'.$u->id)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-ruler-pencil"></i>
                                     </a>
-                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="" class="active styling-edit" ui-toggle-class="">
+                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-user/'.$u->id)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-simple-remove"></i>
                                     </a>
                                 </td>

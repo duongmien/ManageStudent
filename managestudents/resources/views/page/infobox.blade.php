@@ -34,7 +34,7 @@ use Illuminate\Support\Facades\Session;
       </symbol>
     </svg>
     <main class="my-infobox">
-       @foreach($info as $key => $in)
+      @foreach($info as $key => $in)
       <form  class="px-4" role="form" action="{{URL::to('/update-info/'.$in->id)}}" method="POST" enctype="multipart/form-data">
         @csrf   
         <input type="hidden" name="token" value="{{ csrf_token() }}">
