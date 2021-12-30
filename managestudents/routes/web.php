@@ -29,6 +29,7 @@ Route::get('/all-user','UserController@all_user');
 Route::get('/add-user','UserController@add_user');
 Route::post('/save-user','UserController@save_user');
 Route::get('/edit-user/{id}','UserController@edit_user');
+Route::post('/update-user/{id}','UserController@update_user');
 Route::get('/delete-user/{id}','UserController@delete_user');
 
 // Khoa

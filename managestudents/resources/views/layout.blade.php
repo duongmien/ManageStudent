@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trang chủ</title>
     <!-- Mobile Specific Meta -->
-    <link rel="stylesheet" href="{{('assets/css/index.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/index.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{('assets/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/fontawesome-all.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/flaticon.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{('assets/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/video.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/lightbox.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/progess.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/responsive.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/colors/switch.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/video.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/progess.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/colors/switch.css')}}">
     <!-- <link rel="icon" type="png" href="{{asset('frontend/assets/img/favicon.png')}}"> -->
 </head>
 

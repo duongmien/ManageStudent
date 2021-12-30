@@ -14,8 +14,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
-  <link rel="stylesheet" href="{{('assets/css/fontawesome-all.css')}}">
-  <link rel="stylesheet" href="{{('assets/css/index.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/index.css')}}">
 
   <link href="{{asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet" />
   <link href="{{asset('admin/assets/css/paper-dashboard.css?v=2.0.1')}}" rel="stylesheet" />
@@ -38,7 +38,7 @@ echo '<script>alert("'.$message.'");</script> ';
       <div class="logo">
         <a href="https://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="{{('admin/assets/img/logo-small.png')}}">
+            <img src="{{asset('admin/assets/img/logo-small.png')}}">
           </div>
           <!-- <p>CT</p> -->
         </a>
