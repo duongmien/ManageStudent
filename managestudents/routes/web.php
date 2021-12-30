@@ -28,6 +28,7 @@ Route::post('/edit-user','AdminController@edit_user');
 
 // Khoa
 Route::get('/all-khoa','khoaController@all_khoa');
+Route::get('/add-khoa','khoaController@add_khoa');
 Route::get('/edit-khoa','khoaController@edit_khoa');
 Route::get('/delete-khoa/{idkhoa}','khoaController@delete_khoa');
 

@@ -26,5 +26,8 @@ class khoaController extends Controller
         Session::put('message','Khoa được xóa thành công !!!');
         return Redirect::to('/all-khoa');
     }
+    public function add_khoa(){
+        return view('admin.add_khoa');
+    }
 
 }
