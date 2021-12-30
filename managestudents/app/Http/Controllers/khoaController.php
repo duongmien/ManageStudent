@@ -29,5 +29,14 @@ class khoaController extends Controller
     public function add_khoa(){
         return view('admin.add_khoa');
     }
+    public function save_khoa(Request $request){
+        // $this->AuthLogin();
+        $data = array();
+        $data['tenkhoa'] = $request->tenkhoa;
+        DB::table('tbl_khoa')->insert($data);
+        Session::put('message','Thêm khoa thành công!!!');
+        return Redirect::to('/all-khoa');
+    }
+
 
 }
