@@ -18,7 +18,7 @@ class khoaController extends Controller
         // $this->AuthLogin();
         $edit_khoa = DB::table('tbl_khoa')->where('idkhoa',$khoa_id)->get();
         $manager_khoa = view('admin.edit_khoa')->with('edit_khoa',$edit_khoa);
-        return view('admin.edit_khoa', $manager_khoa);
+        return view('layout_admin')->with('admin.edit_khoa', $manager_khoa);
     }
     public function delete_khoa($khoa_id){
         // $this->AuthLogin();
@@ -37,6 +37,14 @@ class khoaController extends Controller
         Session::put('message','Thêm khoa thành công!!!');
         return Redirect::to('/all-khoa');
     }
+    public function update_khoa(Request $request ,$khoa_id){
+        // $this->AuthLogin();
+        $data = array();
+        $data['tenkhoa'] = $request->tenkhoa;
 
+        DB::table('tbl_khoa')->where('idkhoa',$khoa_id)->update($data);
+        Session::put('message','Cập nhật khoa thành công!!!');
+        return Redirect::to('/all-khoa');
+    }
 
 }
