@@ -24,6 +24,23 @@ class UserController extends Controller
         return view('admin.add_user',compact('allnganh','allkhoa','alllopsh'));
        
     }
+    public function save_user(Request $request)
+    {
+        $d = $request->ms."/".$request->ds."/".$request->ys;
+        $data = array();
+        $data['idsv'] = $request->idsv;
+        $data['idrole'] = 2;
+        $data['password'] = 12345;
+        $data['name'] = $request->name;
+        $data['lop'] = $request->lop;
+        $data['nganh'] = $request->nganh;
+        $data['khoa'] = $request->khoa;
+        $data['ngaysinh'] = $d;
+        $data['gioitinh'] = $request->gioitinh;
+        DB::table('tbl_user')->insert($data);
+        Session::put('message','Cập nhật thông tin thành công!!!');
+        return Redirect::to('all-user');
+    }
     public function edit_user()
     {
         return view('admin.edit_user');

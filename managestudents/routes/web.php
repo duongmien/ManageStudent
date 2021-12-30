@@ -27,6 +27,7 @@ Route::get('/dashboard','AdminController@index');
 //admin.user
 Route::get('/all-user','UserController@all_user');
 Route::get('/add-user','UserController@add_user');
+Route::post('/save-user','UserController@save_user');
 Route::post('/edit-user','UserController@edit_user');
 Route::post('/delete-user','UserController@edit_user');
 
