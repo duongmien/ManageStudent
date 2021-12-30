@@ -2,16 +2,16 @@
 @section('left-nav')
 <ul class="nav">
     <li>
-    <a href="{{URL::to('/dashboard')}}">
-        <i class="nc-icon nc-bank"></i>
-        <p>Dashboard</p>
-    </a>
+        <a href="{{URL::to('/dashboard')}}">
+            <i class="nc-icon nc-bank"></i>
+            <p>Dashboard</p>
+        </a>
     </li>
     <li class="active ">
-    <a href="{{URL::to('/all-user')}}">
-        <i class="nc-icon nc-diamond"></i>
-        <p>Quản lý sinh viên</p>
-    </a>
+        <a href="{{URL::to('/all-user')}}">
+            <i class="nc-icon nc-diamond"></i>
+            <p>Quản lý sinh viên</p>
+        </a>
     </li>
 </ul>
 @endsection
@@ -20,6 +20,7 @@
 <div class="row">
 
     <div class="col-md-12">
+<<<<<<< HEAD
     <div class="card card-user">
         <div class="card-header">
         <h5 class="card-title text-center">Thêm Sinh Viên</h5>
@@ -128,20 +129,80 @@
             <div class="update ml-auto mr-auto">
                 <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
             </div>
+=======
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title text-center">Thêm Sinh Viên</h5>
             </div>
-        </form>
+            <div class="card-body ">
+                <form>
+                    <div class="row  justify-content-center">
+                        <div class="col-md-4">
+                            <div class="col justify-content-end text-center">
+                                <div class="form-group">
+                                    <label>Họ và tên</label>
+                                    <input type="text" class="form-control" placeholder="Họ và tên" value="">
+                                </div>
+                            </div>
+                            <div class="col justify-content-end text-center">
+                                <div class="form-group">
+                                    <label>Họ và tên</label>
+                                    <input type="text" class="form-control" placeholder="Họ và tên" value="">
+                                </div>
+                            </div>
+                            <div class="col justify-content-end text-center">
+                                <div class="form-group">
+                                    <label>Họ và tên</label>
+                                    <input type="text" class="form-control" placeholder="Họ và tên" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="col justify-content-center text-center">
+                                <div class="form-group">
+                                    <label>Mã sinh viên</label>
+                                    <input type="text" class="form-control" placeholder="Mã sinh viên" value="">
+                                </div>
+                            </div>
+                            <div class="col justify-content-center text-center">
+                                <div class="form-group">
+                                    <label>Mã sinh viên</label>
+                                    <input type="text" class="form-control" placeholder="Mã sinh viên" value="">
+                                </div>
+                            </div>
+                            <div class="col justify-content-center text-center">
+                                <div class="form-group">
+                                    <label>Mã sinh viên</label>
+                                    <input type="text" class="form-control" placeholder="Mã sinh viên" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="update ml-auto mr-auto">
+                            <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
+                        </div>
+                    </div>
+                </form>
+>>>>>>> c63e0a34c5ac0bb965f69ebda5cf4572b06850da
+            </div>
         </div>
-    </div>
     </div>
 </div>
 <script>
+<<<<<<< HEAD
       $(document).ready(function() {
+=======
+    $(document).ready(function() {
+>>>>>>> c63e0a34c5ac0bb965f69ebda5cf4572b06850da
 
         var readURL = function(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     $('.profile-pic').attr('src', e.target.result);
                 }
 
@@ -149,16 +210,25 @@
             }
         }
 
+<<<<<<< HEAD
         $(".file-upload").on('change', function(){
+=======
+        $(".file-upload").on('change', function() {
+>>>>>>> c63e0a34c5ac0bb965f69ebda5cf4572b06850da
             readURL(this);
         });
 
         $(".upload-button").on('click', function() {
+<<<<<<< HEAD
           console.log('ok');
           $(".file-upload").click();
+=======
+            console.log('ok');
+            $(".file-upload").click();
+>>>>>>> c63e0a34c5ac0bb965f69ebda5cf4572b06850da
 
         });
     });
-    </script>
+</script>
 
 @endsection

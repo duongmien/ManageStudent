@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 class khoaController extends Controller
 {
-    public function viewall_khoa(){
-        return view('admin.all_khoa');
-    }
-
     public function all_khoa(){
         // $this->AuthLogin();
         $all_khoa = DB::table('tbl_khoa')->get();
@@ -27,7 +23,7 @@ class khoaController extends Controller
     public function delete_khoa($khoa_id){
         // $this->AuthLogin();
         DB::table('tbl_khoa')->where('idkhoa',$khoa_id)->delete();
-        Session::put('message','Xóa danh mục sản phẩm thành công!!!');
+        Session::put('message','Khoa được xóa thành công !!!');
         return Redirect::to('/all-khoa');
     }
 

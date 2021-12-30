@@ -1,5 +1,3 @@
-@extends('layout_admin')
-@section('left-nav')
 <?php
 use Illuminate\Support\Facades\Session;
 $message = Session::get('message');
@@ -9,6 +7,8 @@ echo '<script>alert("'.$message.'");</script> ';
     Session::put('message',null);
 }
 ?>
+@extends('layout_admin')
+@section('left-nav')
 <ul class="nav">
     <li>
         <a href="{{URL::to('/dashboard')}}">
@@ -28,13 +28,13 @@ echo '<script>alert("'.$message.'");</script> ';
             <p>Quản lý Khoa</p>
         </a>
     </li>
-    <li class="active ">
+    <li>
         <a href="{{URL::to('/all-nganh')}}">
             <i class="nc-icon nc-istanbul"></i>
             <p>Quản lý Ngành</p>
         </a>
     </li>
-    <li>
+    <li class="active">
         <a href="{{URL::to('/all-lop')}}">
             <i class="nc-icon nc-badge"></i>
             <p>Quản lý Lớp</p>
@@ -52,29 +52,29 @@ echo '<script>alert("'.$message.'");</script> ';
             <div class="card-body">
                 <div class="row">
                     <div class="update ml-4 mr-2">
-                        <button type="submit" class="btn btn-primary btn-round">Thêm Ngành</button>
+                        <button type="submit" class="btn btn-primary btn-round">Thêm Lớp</button>
                     </div>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead class=" text-primary">
                             <th class="text-center">STT</th>
-                            <th class="text-center">Tên Khoa</th>
-                            <th class="text-center">Tên Ngành</th>   
+                            <th class="text-center">Tên Ngành</th>
+                            <th class="text-center">Tên Lớp</th>
                         </thead>
                         <tbody>
                             <tr>
                                 <?php $i = 1; ?>
-                                @foreach($all_nganh as $key => $cate_pro)
+                                @foreach($all_lop as $key => $cate_pro)
                             <tr>
                                 <td class="text-center"><?php echo $i++; ?></td>
-                                <td class="text-center">{{$cate_pro->tenkhoa}}</td>
                                 <td class="text-center">{{$cate_pro->tennganh}}</td>
+                                <td class="text-center">{{$cate_pro->tenlop}}</td>
                                 <td class="text-center">
                                     <a href="{{URL::to('/edit-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-ruler-pencil"></i>
                                     </a>
-                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-nganh/'.$cate_pro->idnganh)}}" class="active styling-edit" ui-toggle-class="">
+                                    <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-lop/'.$cate_pro->idlop)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-simple-remove"></i>
                                     </a>
                                 </td>

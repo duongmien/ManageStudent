@@ -1,3 +1,12 @@
+<?php
+use Illuminate\Support\Facades\Session;
+$message = Session::get('message');
+if($message){
+
+echo '<script>alert("'.$message.'");</script> ';
+    Session::put('message',null);
+}
+?>
 @extends('layout_admin')
 @section('left-nav')
 <ul class="nav">
@@ -23,6 +32,12 @@
         <a href="{{URL::to('/all-nganh')}}">
             <i class="nc-icon nc-istanbul"></i>
             <p>Quản lý Ngành</p>
+        </a>
+    </li>
+    <li>
+        <a href="{{URL::to('/all-lop')}}">
+            <i class="nc-icon nc-badge"></i>
+            <p>Quản lý Lớp</p>
         </a>
     </li>
 </ul>
