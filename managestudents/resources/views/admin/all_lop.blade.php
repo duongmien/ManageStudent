@@ -46,7 +46,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="update ml-4 mr-2">
-                        <button type="submit" class="btn btn-primary btn-round">Thêm Lớp</button>
+                        <a href="{{URL::to('/add-lop')}}" style="color: #fff;" class="btn btn-primary btn-round">Thêm Lớp</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -65,7 +65,7 @@
                                 <td class="text-center">{{$cate_pro->tennganh}}</td>
                                 <td class="text-center">{{$cate_pro->tenlop}}</td>
                                 <td class="text-center">
-                                    <a href="{{URL::to('/edit-khoa/'.$cate_pro->idkhoa)}}" class="active styling-edit" ui-toggle-class="">
+                                    <a href="{{URL::to('/edit-lop/'.$cate_pro->idlop)}}" class="active styling-edit" ui-toggle-class="">
                                         <i class="nc-icon nc-ruler-pencil"></i>
                                     </a>
                                     <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="{{URL::to('/delete-lop/'.$cate_pro->idlop)}}" class="active styling-edit" ui-toggle-class="">

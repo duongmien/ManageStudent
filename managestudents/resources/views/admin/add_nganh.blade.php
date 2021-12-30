@@ -22,13 +22,13 @@ echo '<script>alert("'.$message.'");</script> ';
             <p>Quản lý sinh viên</p>
         </a>
     </li>
-    <li class="active ">
+    <li>
         <a href="{{URL::to('/all-khoa')}}">
             <i class="nc-icon nc-tile-56"></i>
             <p>Quản lý Khoa</p>
         </a>
     </li>
-    <li>
+    <li class="active ">
         <a href="{{URL::to('/all-nganh')}}">
             <i class="nc-icon nc-istanbul"></i>
             <p>Quản lý Ngành</p>
@@ -47,36 +47,28 @@ echo '<script>alert("'.$message.'");</script> ';
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Sửa khoa</h4>
+                    <h4 class="card-title">Thêm ngành</h4>
                 </div>
                 <div class="card-body">
-                    @foreach($edit_khoa as $key => $edit_value)
-                    <form action="{{URL::to('/update-khoa/'.$edit_value->idkhoa)}}" method="POST">
+                    <form action="{{URL::to('/save-nganh')}}" method="POST">
                     @csrf   
                         <input type="hidden" name="token" value="{{ csrf_token() }}">
                         <div class="form-group">
-                            <label for="tenkhoa">Tên Khoa</label>
-                            <input type="text" class="form-control" name="tenkhoa" id="tenkhoa" value="{{ $edit_value->tenkhoa }}" placeholder="Nhập khoa cần thêm...">
-                        </div>
-                        <!-- <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <label for="exampleFormControlSelect1">Khoa</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="idkhoa">
+                            @foreach($all_khoa as $key => $value)
+                                <option value="{{ $value->idkhoa }}">{{$value->tenkhoa}}</option>
+                            @endforeach 
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div> -->
+                            <label for="tennganh">Tên Ngành</label>
+                            <input type="text" class="form-control" name="tennganh" id="tennganh" placeholder="Nhập ngành cần thêm...">
+                        </div>
                         <div>
                             <button type="submit" class="btn btn-primary btn-round">OK</button>
                         </div>
                     </form>
-                    @endforeach
                 </div>
             </div>
         </div>
