@@ -17,11 +17,21 @@ class LoginController extends Controller
 
         $result = DB::table('tbl_user')->where('idsv',$idsv)->where('password',$password)->first();
         if($result){
-            Session::put('name',$result->name);
-            Session::put('id',$result->id);
-            Session::put('idsv',$result->idsv);
-            Session::put('message','Đăng nhập thành công!!!');
-            return Redirect::to('/inputinfo');
+            if($result->idrole==2){
+                Session::put('name',$result->name);
+                Session::put('id',$result->id);
+                Session::put('idsv',$result->idsv);
+                Session::put('idrole',$result->idrole);
+                Session::put('message','Đăng nhập thành công!!!');
+                return Redirect::to('/');
+            }else if($result->idrole==1){
+                Session::put('name',$result->name);
+                Session::put('id',$result->id);
+                Session::put('idsv',$result->idsv);
+                Session::put('idrole',$result->idrole);
+                Session::put('message','Đăng nhập thành công!!!');
+                return Redirect::to('/dashboard');
+            }
         }else{
             Session::put('message','Tài khoản hoặc mật khẩu không chính xác!!!');
             return Redirect::to('/');
@@ -30,6 +40,8 @@ class LoginController extends Controller
     public function logout()
     {
         Session::put('name',null);
+        Session::put('id',null);
+        Session::put('idrole',null);
         Session::put('idsv',null);
         return Redirect::to('/');
     }

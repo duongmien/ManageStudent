@@ -9,7 +9,7 @@
     </li>
     <li>
         <a href="{{URL::to('/all-user')}}">
-            <i class="nc-icon nc-diamond"></i>
+            <i class="nc-icon nc-single-02"></i>
             <p>Quản lý sinh viên</p>
         </a>
     </li>
@@ -35,6 +35,14 @@
 @endsection
 
 @section('admin_content')
+<?php
+use Illuminate\Support\Facades\Session;
+$u = Session::get('u');
+$k = Session::get('k');
+$n = Session::get('n');
+$l = Session::get('l');
+
+?>
 <div class="container-fluid">
     <div class="navbar-wrapper">
         <div class="navbar-toggle">
@@ -105,13 +113,13 @@
                     <div class="row">
                         <div class="col-5 col-md-4">
                             <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-globe text-warning"></i>
+                                <i class="nc-icon nc-single-02 text-warning"></i>
                             </div>
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Capacity</p>
-                                <p class="card-title">150GB
+                                <p class="card-category">Sinh viên</p>
+                                <p class="card-title">{{$u}}
                                 <p>
                             </div>
                         </div>
@@ -132,13 +140,13 @@
                     <div class="row">
                         <div class="col-5 col-md-4">
                             <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
+                                <i class="nc-icon nc-tile-56 text-success"></i>
                             </div>
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Revenue</p>
-                                <p class="card-title">$ 1,345
+                                <p class="card-category">Khoa</p>
+                                <p class="card-title">{{$k}}
                                 <p>
                             </div>
                         </div>
@@ -159,13 +167,13 @@
                     <div class="row">
                         <div class="col-5 col-md-4">
                             <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-vector text-danger"></i>
+                                <i class="nc-icon nc-istanbul text-danger"></i>
                             </div>
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Errors</p>
-                                <p class="card-title">23
+                                <p class="card-category">Ngành</p>
+                                <p class="card-title">{{$n}}
                                 <p>
                             </div>
                         </div>
@@ -186,13 +194,13 @@
                     <div class="row">
                         <div class="col-5 col-md-4">
                             <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-favourite-28 text-primary"></i>
+                                <i class="nc-icon nc-badge text-primary"></i>
                             </div>
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Followers</p>
-                                <p class="card-title">+45K
+                                <p class="card-category">Lớp</p>
+                                <p class="card-title">{{$l}}
                                 <p>
                             </div>
                         </div>

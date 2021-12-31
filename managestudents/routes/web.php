@@ -22,7 +22,7 @@ Route::post('/check-login','LoginController@check_login');
 Route::get('/logout','LoginController@logout');
 
 //admin
-Route::get('/dashboard','AdminController@index');
+Route::get('/dashboard','DashboardController@dashboard');
 
 //admin.user
 Route::get('/all-user','UserController@all_user');

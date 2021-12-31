@@ -118,7 +118,7 @@
                                     <li class="menu-item-has-children ul-li-block">
                                         <a href="{{URL::to('/')}}">Trang Chủ</a>
                                     </li>
-                                    <li><a href="contact.html">Liên hệ</a></li>
+                                    <li><a href="{{URL::to('/inputinfo')}}">Chỉnh sửa thông tin</a></li>
                                 </ul>
                             </div>
                         </nav>

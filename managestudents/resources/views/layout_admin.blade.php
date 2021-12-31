@@ -26,6 +26,7 @@
 <?php
 use Illuminate\Support\Facades\Session;
 $message = Session::get('message');
+$name = Session::get('name');
 if($message){
 
 echo '<script>alert("'.$message.'");</script> ';
@@ -36,14 +37,14 @@ echo '<script>alert("'.$message.'");</script> ';
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="{{URL::to('/dashboard')}}" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="{{asset('admin/assets/img/logo-small.png')}}">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-          HELLO ADMIN
+        <a href="{{URL::to('/dashboard')}}" class="simple-text logo-normal">
+          {{$name}}
           <!-- <div class="logo-image-big">
             <img src="admin/assets/img/logo-big.png">
           </div> -->
@@ -73,7 +74,7 @@ echo '<script>alert("'.$message.'");</script> ';
             </form>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link btn-rotate" href="javascript:;">
+                <a class="nav-link btn-rotate" href="{{URL::to('logout')}}">
                   <i class="nc-icon nc-share-66">Logout</i>
                 </a>
               </li>

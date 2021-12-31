@@ -9,15 +9,26 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
-    
+    public function AuthLogin()
+    {
+        $admin_id = Session::get('id');
+        $role_id = Session::get('idrole');
+        if($role_id==1){
+            return Redirect::to('dashboard');
+        }else{
+            return Redirect::to('/')->send();
+        }
+    }
     public function all_user()
     {
+        $this->AuthLogin();
         $alluser = DB::table('tbl_user')->get();
         $alllop = DB::table('tbl_lopsh')->get();
         return view('admin.all_user',compact('alluser','alllop'));
     }
     public function add_user()
     {
+        $this->AuthLogin();
         $id = Session::get('id');
         $allnganh = DB::table('tbl_nganh')->get();
         $allkhoa = DB::table('tbl_khoa')->get();
@@ -26,6 +37,7 @@ class UserController extends Controller
     }
     public function save_user(Request $request)
     {
+        $this->AuthLogin();
         $d = $request->ms."/".$request->ds."/".$request->ys;
         $data = array();
         $data['idsv'] = $request->idsv;
@@ -43,6 +55,7 @@ class UserController extends Controller
     }
     public function edit_user($id)
     {
+        $this->AuthLogin();
         $allnganh = DB::table('tbl_nganh')->get();
         $allkhoa = DB::table('tbl_khoa')->get();
         $alllopsh = DB::table('tbl_lopsh')->get();
@@ -56,6 +69,7 @@ class UserController extends Controller
     }
     public function update_user(Request $request ,$id)
     {
+        $this->AuthLogin();
         $d = $request->ms."/".$request->ds."/".$request->ys;
         $d1 = $request->mc."/".$request->dc."/".$request->yc;
         $d2 = $request->mh."/".$request->dh."/".$request->yh;
@@ -102,6 +116,7 @@ class UserController extends Controller
     }
     public function delete_user($id)
     {
+        $this->AuthLogin();
         DB::table('tbl_user')->where('id',$id)->delete();
         Session::put('message','Xóa sinh viên thành công !!!');
         return Redirect::to('/all-user');

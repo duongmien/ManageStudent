@@ -10,8 +10,19 @@ session_start();
 
 class InputInfoController extends Controller
 {
+    public function AuthLogin()
+    {
+        $admin_id = Session::get('id');
+        $role_id = Session::get('idrole');
+        if($role_id==2){
+            return Redirect::to('/');
+        }else{
+            return Redirect::to('/')->send();
+        }
+    }
     public function index()
     {
+        $this->AuthLogin();
         $id = Session::get('id');
         $allnganh = DB::table('tbl_nganh')->get();
         $allkhoa = DB::table('tbl_khoa')->get();
@@ -25,6 +36,7 @@ class InputInfoController extends Controller
     }
 
     public function update_info(Request $request ,$id){
+        $this->AuthLogin();
         $d = $request->ms."/".$request->ds."/".$request->ys;
         $d1 = $request->mc."/".$request->dc."/".$request->yc;
         $d2 = $request->mh."/".$request->dh."/".$request->yh;

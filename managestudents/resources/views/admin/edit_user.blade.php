@@ -9,7 +9,7 @@
     </li>
     <li class="active ">
         <a href="{{URL::to('/all-user')}}">
-            <i class="nc-icon nc-diamond"></i>
+            <i class="nc-icon nc-single-02"></i>
             <p>Quản lý sinh viên</p>
         </a>
     </li>
