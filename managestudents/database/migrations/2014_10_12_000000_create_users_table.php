@@ -51,13 +51,20 @@ class CreateUsersTable extends Migration
         });
         $faker = Faker\Factory::create();
         $limit=70;
+        DB::table('tbl_user')->insert([
+            'idsv' =>'admin',
+            'idrole' =>1,
+            'name' =>'admin',
+            'password' =>'admin',
+            'anh' =>'avt_male.png'
+        ]);
         for($i=1;$i<=$limit;$i++){
-            
                 DB::table('tbl_user')->insert([
                     'idsv' =>'1911505310100'+$i,
                     'idrole' =>2,
                     'name' => ($faker->randomElement($aray=array('Nguyễn','Đặng','Phan','Vũ','Trần','Lê','Phạm','Hoàng'))).' '.($faker->randomElement($aray=array('Văn','Hoàng','Thị','Anh','Trung','Thùy'))).' '.($faker->randomElement($aray=array('Anh','Vy','Ngọc','Quân','Long','Phúc','Huy','Minh','Bảo','Ngân','Khang','Như','Nhi','Hân','Thư','Linh'))),
                     'password' =>'12345',
+                    'anh' => ($faker->randomElement($aray=array('avt_male.png','avt_female.png'))),
                 ]);
             
         }
