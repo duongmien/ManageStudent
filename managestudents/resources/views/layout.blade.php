@@ -65,7 +65,7 @@
                                 use Illuminate\Support\Facades\Session;
                                 $idsv = Session::get('idsv');
                                 if($idsv != null){?>
-                                    <a href="{{URL::to('logout')}}" >Logout</a>
+                                    <a href="{{URL::to('logout')}}" >Đăng xuất</a>
                                 <?php }else{?>
                                     <a data-toggle="modal" data-target="#myModal" href="#">Đăng nhập</a><?php
                                 }
