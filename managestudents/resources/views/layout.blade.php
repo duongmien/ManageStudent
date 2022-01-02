@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="navbar-default">
                         <div class="navbar-header float-left">
-                            <a class="navbar-brand text-uppercase" href="#"><img src="{{('assets/img/logo/logo.png')}}" alt="logo"></a>
+                            <a class="navbar-brand text-uppercase" href="#"><img src="{{('assets/img/logo/logoute50.png')}}" alt="logo"></a>
                         </div><!-- /.navbar-header -->
 
                        
