@@ -317,7 +317,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Daniel Alvares</span>
+							<span class="teacher-name">Lê Thiện Nhật Quang</span>
 							<span class="teacher-designation">Mobile Apps</span>
 						</div>
 					</div>
@@ -335,7 +335,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Daniel Alvares</span>
+							<span class="teacher-name">Huỳnh Thị Mỹ Lệ</span>
 							<span class="teacher-designation">Mobile Apps</span>
 						</div>
 					</div>
@@ -353,7 +353,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Juliana Hernandes</span>
+							<span class="teacher-name">Nguyễn Văn Hà</span>
 							<span class="teacher-designation">Web Design</span>
 						</div>
 					</div>
@@ -371,7 +371,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Daniel Alvares</span>
+							<span class="teacher-name">Nguyễn Thị Hà Quyên</span>
 							<span class="teacher-designation">Mobile Apps</span>
 						</div>
 					</div>
@@ -389,7 +389,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Berliana Luis</span>
+							<span class="teacher-name">Mai Xuân Trí</span>
 							<span class="teacher-designation">IOS App</span>
 						</div>
 					</div>
@@ -407,7 +407,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Johansen Doe</span>
+							<span class="teacher-name">Lê Vũ</span>
 							<span class="teacher-designation">Mobile Apps</span>
 						</div>
 					</div>
@@ -425,7 +425,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Johanas Doe</span>
+							<span class="teacher-name">Phạm Văn Tuấn</span>
 							<span class="teacher-designation">Graphic</span>
 						</div>
 					</div>
@@ -443,7 +443,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Daniel Alvares</span>
+							<span class="teacher-name">Cao Văn Sang</span>
 							<span class="teacher-designation">Mobile Apps</span>
 						</div>
 					</div>
@@ -461,7 +461,7 @@
 							</div>
 						</div>
 						<div class="teacher-name-designation mt15">
-							<span class="teacher-name">Daniel Alvares</span>
+							<span class="teacher-name">Nguyễn Mai Thy</span>
 							<span class="teacher-designation">Mobile Apps</span>
 						</div>
 					</div>
